@@ -1,0 +1,1185 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="97a888cf-b6a8-481e-9bcb-858f7f9c4a05" Name="阿洛宝宝椅" Enabled="true">
+    <Folders>
+      <Folder Id="83071266-ba2e-4614-a6aa-587201756a94" ZoneFilterRegularExpression="by 阿洛 MnFeN" Name="高级标点工具箱 AdvWm v2.0" Enabled="true">
+        <Folders>
+          <Folder Id="db0835b6-8778-40e1-a5f1-8fbaee17a8e6" Name="标点" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="径向插值标点 polarConnect" Id="da5da6c8-051a-48e7-a6f6-3cd06181d234" RegularExpression="^AdvWm_polarConnect:center:(?&lt;xc&gt;[^:]+):(?&lt;yc&gt;[^:]+)(?::[^:]+)?:start:(?&lt;x0&gt;[^:]+):(?&lt;y0&gt;[^:]+):(?&lt;z0&gt;[^:]+):end:(?&lt;x1&gt;[^:]+):(?&lt;y1&gt;[^:]+):(?&lt;z1&gt;[^:]+):waymarkers:(?&lt;wm&gt;[^:]+)">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="初始化" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="AdvWm_len" VariableExpression="${f:length:${wm}}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" DictVariableOp="Build" DictVariableTarget="AdvWm_WmMapping" DictVariableValue="=,A=A,B=B,C=C,D=D,1=One,2=Two,3=Three,4=Four" DictTargetPersist="True" ActionType="DictVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${pd:AdvWm_WmMapping.size}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" ActionType="Placeholder" Description="极坐标转换（注：实际为不考虑高度的柱坐标系）" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="AdvWm_r0" VariableExpression="d(${xc}, ${yc}, ${x0}, ${y0})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="AdvWm_r1" VariableExpression="d(${xc}, ${yc}, ${x1}, ${y1})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="AdvWm_θ0" VariableExpression="θ(${xc}, ${yc}, ${x0}, ${y0})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="AdvWm_θ1" VariableExpression="θ(${xc}, ${yc}, ${x1}, ${y1})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="AdvWm_θ1" VariableExpression="relθ(${v:AdvWm_θ0}, ${v:AdvWm_θ1}) + ${v:AdvWm_θ0}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" ActionType="Placeholder" Description="wm 拆分为列表   转换为标点名" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" ListVariableOp="SetAll" ListVariableName="AdvWm_polar" ListVariableExpression="${pd:AdvWm_WmMapping[${f:slice(${n:${_idx}-1}):${wm}}]}" ListVariableIndex="${v:AdvWm_len}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" ActionType="Placeholder" Description="计算所有半径和角度" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" ListVariableOp="SetAll" ListVariableExpressionType="Numeric" ListVariableName="AdvWm_r" ListVariableExpression="((${v:AdvWm_len} - ${_idx}) * ${v:AdvWm_r0} + (${_idx} - 1) * ${v:AdvWm_r1}) / (${v:AdvWm_len} - 1)" ListVariableIndex="${v:AdvWm_len}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" ListVariableOp="SetAll" ListVariableExpressionType="Numeric" ListVariableName="AdvWm_θ" ListVariableExpression="((${v:AdvWm_len} - ${_idx}) * ${v:AdvWm_θ0} + (${_idx} - 1) * ${v:AdvWm_θ1}) / (${v:AdvWm_len} - 1)" ListVariableIndex="${v:AdvWm_len}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" ActionType="Placeholder" Description="加权计算坐标   转换为 JSON 格式" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" ListVariableOp="SetAll" ListVariableName="AdvWm_polar" ListVariableExpression="&quot;${_this}&quot;: {&#xD;&#xA;    &quot;X&quot;: ${n: ${xc} + ${l:AdvWm_r[${_idx}]} * sin(${l:AdvWm_θ[${_idx}]})}, &#xD;&#xA;    &quot;Z&quot;: ${n: ${yc} + ${l:AdvWm_r[${_idx}]} * cos(${l:AdvWm_θ[${_idx}]})}, &#xD;&#xA;    &quot;Y&quot;: ${n: ((${v:AdvWm_len} - ${_idx}) * ${z0} + (${_idx} - 1) * ${z1}) / (${v:AdvWm_len} - 1)}, &#xD;&#xA;    &quot;Active&quot;: true&#xD;&#xA;}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" ActionType="Placeholder" Description="输出" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" VariableOp="SetString" VariableName="AdvWm_json" VariableExpression="{&#xD;&#xA;${l:AdvWm_polar.join(&quot;,⏎&quot;)}&#xD;&#xA;}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="19" VariableOp="Clipboard" VariableName="AdvWm_json" Enabled="False" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="20" NamedCallbackName="place" NamedCallbackParam="${v:AdvWm_json}" VariableOp="SetString" ActionType="NamedCallback" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="21" VariableOp="UnsetRegexUniversal" VariableName="^AdvWm" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${wm}" ExpressionTypeL="String" ExpressionR="[A-D1-4]{2,8}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="线性插值标点 linearConnect" Id="760b7865-2b82-47cf-9cee-2a50a87056cf" RegularExpression="^AdvWm_linearConnect:start:(?&lt;x0&gt;[^:]+):(?&lt;y0&gt;[^:]+):(?&lt;z0&gt;[^:]+):end:(?&lt;x1&gt;[^:]+):(?&lt;y1&gt;[^:]+):(?&lt;z1&gt;[^:]+):waymarkers:(?&lt;wm&gt;[^:]+)">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="初始化" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="AdvWm_len" VariableExpression="${f:length:${wm}}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" DictVariableOp="Build" DictVariableTarget="AdvWm_WmMapping" DictVariableValue="=,A=A,B=B,C=C,D=D,1=One,2=Two,3=Three,4=Four" DictTargetPersist="True" ActionType="DictVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${pd:AdvWm_WmMapping.size}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" ActionType="Placeholder" Description="wm 拆分为列表   转换为标点名" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" ListVariableOp="SetAll" ListVariableName="AdvWm_linear" ListVariableExpression="${pd:AdvWm_WmMapping[${f:slice(${n:${_idx}-1}):${wm}}]}" ListVariableIndex="${v:AdvWm_len}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" ActionType="Placeholder" Description="加权计算坐标   转换为 JSON 格式" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" ListVariableOp="SetAll" ListVariableName="AdvWm_linear" ListVariableExpression="&quot;${_this}&quot;: {&#xD;&#xA;    &quot;X&quot;: ${n: ((${v:AdvWm_len} - ${_idx}) * ${x0} + (${_idx} - 1) * ${x1}) / (${v:AdvWm_len} - 1)}, &#xD;&#xA;    &quot;Z&quot;: ${n: ((${v:AdvWm_len} - ${_idx}) * ${y0} + (${_idx} - 1) * ${y1}) / (${v:AdvWm_len} - 1)}, &#xD;&#xA;    &quot;Y&quot;: ${n: ((${v:AdvWm_len} - ${_idx}) * ${z0} + (${_idx} - 1) * ${z1}) / (${v:AdvWm_len} - 1)}, &#xD;&#xA;    &quot;Active&quot;: true&#xD;&#xA;}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" ActionType="Placeholder" Description="输出" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" VariableOp="SetString" VariableName="AdvWm_json" VariableExpression="{&#xD;&#xA;${l:AdvWm_linear.join(&quot;,⏎&quot;)}&#xD;&#xA;}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" VariableOp="Clipboard" VariableName="AdvWm_json" Enabled="False" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" NamedCallbackName="place" NamedCallbackParam="${v:AdvWm_json}" VariableOp="SetString" ActionType="NamedCallback" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" VariableOp="UnsetRegexUniversal" VariableName="^AdvWm" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${wm}" ExpressionTypeL="String" ExpressionR="[A-D1-4]{2,8}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="旋转矩阵标点 rotate" Id="5311c8d1-43e5-46b6-9bb6-2ab3bde3b456" RegularExpression="^AdvWm_rotate(?::θ:(?&lt;theta&gt;[^:]*))?(?::Center:(?&lt;x0&gt;[^:]*):(?&lt;y0&gt;[^:]*):(?&lt;z0&gt;[^:]*))?(?&lt;A&gt;:A:(?&lt;xa&gt;[^:]*):(?&lt;ya&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;xb&gt;[^:]*):(?&lt;yb&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;xc&gt;[^:]*):(?&lt;yc&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;xd&gt;[^:]*):(?&lt;yd&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;x1&gt;[^:]*):(?&lt;y1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;x2&gt;[^:]*):(?&lt;y2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;x3&gt;[^:]*):(?&lt;y3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;x4&gt;[^:]*):(?&lt;y4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="本触发器为带有旋转角度的标点函数，以 给定的各组坐标偏移 与 给定角度对应的旋转矩阵 分别相乘得到各组实际坐标，并以计算结果调用鲶鱼精邮差场地标点。" DescriptionOverride="True" />
+                  <Action OrderNumber="2" ActionType="Placeholder" DescriptionOverride="True" />
+                  <Action OrderNumber="3" ActionType="Placeholder" Description="格式：AdvWm_rotate:θ:-3.14:Center:100:100:0:A:0:-10:0:1:B:10:0:0:1:C:...:D:...:One:...:Two:...:Three:...:Four:..." DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" ActionType="Placeholder" DescriptionOverride="True" />
+                  <Action OrderNumber="5" ActionType="Placeholder" Description="θ: 作为相对北的参照物所处的坐标的 atan2(dx, dy) 值，即从绝对正北开始逆时针一周 -pi 至 pi" DescriptionOverride="True" />
+                  <Action OrderNumber="6" ActionType="Placeholder" Description="Center：场中心坐标，作为旋转中心。需要 (x0, y0, z0) 三个数值。" DescriptionOverride="True" />
+                  <Action OrderNumber="7" ActionType="Placeholder" Description="A/B/C/D/One/Two/Three/Four: 四个值：(dx, dy, dz, isActive)。其中坐标偏移以相对中心、相对方向为正北时的参考系计算。如以参照物为正北（正上）" DescriptionOverride="True" />
+                  <Action OrderNumber="8" ActionType="Placeholder" Description="如以参照物为正北（正上）时，位于场地中心左 5 下 2 的 A 点，可以记为 “A:-5:2:0:1”" DescriptionOverride="True" />
+                  <Action OrderNumber="9" ActionType="Placeholder" DescriptionOverride="True" />
+                  <Action OrderNumber="10" ActionType="Placeholder" Description="可以缺少整组数据（如 B:xB:yB:zB:isActiveB 整组省略），但剩余组要按顺序。" DescriptionOverride="True" />
+                  <Action OrderNumber="11" ActionType="Placeholder" Description="省略的θ、Center组将使用缺省值：-pi, (100, 100, 0), 省略某个标点组则不会修改该标点（与鲶鱼精邮差相同）。" DescriptionOverride="True" />
+                  <Action OrderNumber="12" ActionType="Placeholder" DescriptionOverride="True" />
+                  <Action OrderNumber="13" ActionType="Placeholder" Description="也可以缺少单个数据，但要保留冒号，如前文“A:-5:2:0:1”可以记做“A:-5:2::1”，场地中心的 3 点可记做“Three::::1”。" DescriptionOverride="True" />
+                  <Action OrderNumber="14" ActionType="Placeholder" Description="省略的参数将使用缺省值：x0 = 100, y0 = 100, z0 = 0, θ = -pi, 标点的四个参数均为 0" DescriptionOverride="True" />
+                  <Action OrderNumber="15" ActionType="Placeholder" DescriptionOverride="True" />
+                  <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="AdvWm_θ" VariableExpression="(${theta} == ) ? -pi : (${theta})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="AdvWm_x0" VariableExpression="(${x0} == ) ? 100 : (${x0})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" VariableOp="SetNumeric" VariableName="AdvWm_y0" VariableExpression="(${y0} == ) ? 100 : (${y0})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="19" VariableOp="SetNumeric" VariableName="AdvWm_z0" VariableExpression="(${z0})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="20" VariableOp="SetNumeric" VariableName="AdvWm_x_A" VariableExpression="(${xa})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="21" VariableOp="SetNumeric" VariableName="AdvWm_y_A" VariableExpression="(${ya})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="22" VariableOp="SetNumeric" VariableName="AdvWm_z_A" VariableExpression="(${za})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="23" VariableOp="SetNumeric" VariableName="AdvWm_a_A" VariableExpression="(${aa})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="24" VariableOp="SetNumeric" VariableName="AdvWm_x_B" VariableExpression="(${xb})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="25" VariableOp="SetNumeric" VariableName="AdvWm_y_B" VariableExpression="(${yb})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="26" VariableOp="SetNumeric" VariableName="AdvWm_z_B" VariableExpression="(${zb})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="27" VariableOp="SetNumeric" VariableName="AdvWm_a_B" VariableExpression="(${ab})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="28" VariableOp="SetNumeric" VariableName="AdvWm_x_C" VariableExpression="(${xc})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="29" VariableOp="SetNumeric" VariableName="AdvWm_y_C" VariableExpression="(${yc})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="30" VariableOp="SetNumeric" VariableName="AdvWm_z_C" VariableExpression="(${zc})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="31" VariableOp="SetNumeric" VariableName="AdvWm_a_C" VariableExpression="(${ac})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="32" VariableOp="SetNumeric" VariableName="AdvWm_x_D" VariableExpression="(${xd})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="33" VariableOp="SetNumeric" VariableName="AdvWm_y_D" VariableExpression="(${yd})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="34" VariableOp="SetNumeric" VariableName="AdvWm_z_D" VariableExpression="(${zd})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="35" VariableOp="SetNumeric" VariableName="AdvWm_a_D" VariableExpression="(${ad})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="36" VariableOp="SetNumeric" VariableName="AdvWm_x_One" VariableExpression="(${x1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="37" VariableOp="SetNumeric" VariableName="AdvWm_y_One" VariableExpression="(${y1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="38" VariableOp="SetNumeric" VariableName="AdvWm_z_One" VariableExpression="(${z1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="39" VariableOp="SetNumeric" VariableName="AdvWm_a_One" VariableExpression="(${a1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="40" VariableOp="SetNumeric" VariableName="AdvWm_x_Two" VariableExpression="(${x2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="41" VariableOp="SetNumeric" VariableName="AdvWm_y_Two" VariableExpression="(${y2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="42" VariableOp="SetNumeric" VariableName="AdvWm_z_Two" VariableExpression="(${z2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="43" VariableOp="SetNumeric" VariableName="AdvWm_a_Two" VariableExpression="(${a2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="44" VariableOp="SetNumeric" VariableName="AdvWm_x_Three" VariableExpression="(${x3})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="45" VariableOp="SetNumeric" VariableName="AdvWm_y_Three" VariableExpression="(${y3})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="46" VariableOp="SetNumeric" VariableName="AdvWm_z_Three" VariableExpression="(${z3})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="47" VariableOp="SetNumeric" VariableName="AdvWm_a_Three" VariableExpression="(${a1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="48" VariableOp="SetNumeric" VariableName="AdvWm_x_Four" VariableExpression="(${x4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="49" VariableOp="SetNumeric" VariableName="AdvWm_y_Four" VariableExpression="(${y4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="50" VariableOp="SetNumeric" VariableName="AdvWm_z_Four" VariableExpression="(${z4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="51" VariableOp="SetNumeric" VariableName="AdvWm_a_Four" VariableExpression="(${a4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="52" ActionType="Placeholder" Description="加权计算坐标   转换为 JSON 格式" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="53" ListVariableOp="Build" ListVariableExpression=",A,B,C,D,One,Two,Three,Four" ListVariableTarget="AdvWm_rotate" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="54" ListVariableOp="Filter" ListVariableExpressionType="Numeric" ListVariableName="AdvWm_rotate" ListVariableExpression="${f:length:${${_this}}} != 0" ListVariableTarget="AdvWm_rotate" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="55" ListVariableOp="SetAll" ListVariableName="AdvWm_rotate" ListVariableExpression="&quot;${_this}&quot;: {&#xD;&#xA;    &quot;X&quot;:${numeric:${var:AdvWm_x0}-${var:AdvWm_x_${_this}}*cos(${var:AdvWm_θ})-${var:AdvWm_y_${_this}}*sin(${var:AdvWm_θ})}, &#xD;&#xA;    &quot;Y&quot;:${numeric:${var:AdvWm_z0}+${var:AdvWm_z_${_this}}}, &#xD;&#xA;    &quot;Z&quot;:${numeric:${var:AdvWm_y0}+${var:AdvWm_x_${_this}}*sin(${var:AdvWm_θ})-${var:AdvWm_y_${_this}}*cos(${var:AdvWm_θ})}, &#xD;&#xA;    &quot;Active&quot;:${var:AdvWm_a_${_this}}&#xD;&#xA;}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="56" ActionType="Placeholder" Description="输出" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="57" VariableOp="SetString" VariableName="AdvWm_json" VariableExpression="{&#xD;&#xA;${l:AdvWm_rotate.join(&quot;,⏎&quot;)}&#xD;&#xA;}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="58" VariableOp="Clipboard" VariableName="AdvWm_json" Enabled="False" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="59" NamedCallbackName="place" NamedCallbackParam="${v:AdvWm_json}" VariableOp="SetString" ActionType="NamedCallback" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="60" VariableOp="UnsetRegexUniversal" VariableName="^AdvWm" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="绝对坐标标点 abs" Id="5c439cf2-5e58-48bb-a1da-d9321b4a458a" RegularExpression="^AdvWm_abs(?&lt;A&gt;:A:(?&lt;xa&gt;[^:]*):(?&lt;ya&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;xb&gt;[^:]*):(?&lt;yb&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;xc&gt;[^:]*):(?&lt;yc&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;xd&gt;[^:]*):(?&lt;yd&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;x1&gt;[^:]*):(?&lt;y1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;x2&gt;[^:]*):(?&lt;y2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;x3&gt;[^:]*):(?&lt;y3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;x4&gt;[^:]*):(?&lt;y4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="AdvWm_x_A" VariableExpression="(${xa})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="AdvWm_y_A" VariableExpression="(${ya})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="AdvWm_z_A" VariableExpression="(${za})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="AdvWm_a_A" VariableExpression="(${aa})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="AdvWm_x_B" VariableExpression="(${xb})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="AdvWm_y_B" VariableExpression="(${yb})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="AdvWm_z_B" VariableExpression="(${zb})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="AdvWm_a_B" VariableExpression="(${ab})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="AdvWm_x_C" VariableExpression="(${xc})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="AdvWm_y_C" VariableExpression="(${yc})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="11" VariableOp="SetNumeric" VariableName="AdvWm_z_C" VariableExpression="(${zc})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="12" VariableOp="SetNumeric" VariableName="AdvWm_a_C" VariableExpression="(${ac})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="13" VariableOp="SetNumeric" VariableName="AdvWm_x_D" VariableExpression="(${xd})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="14" VariableOp="SetNumeric" VariableName="AdvWm_y_D" VariableExpression="(${yd})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="15" VariableOp="SetNumeric" VariableName="AdvWm_z_D" VariableExpression="(${zd})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="AdvWm_a_D" VariableExpression="(${ad})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="AdvWm_x_One" VariableExpression="(${x1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="18" VariableOp="SetNumeric" VariableName="AdvWm_y_One" VariableExpression="(${y1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="19" VariableOp="SetNumeric" VariableName="AdvWm_z_One" VariableExpression="(${z1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="20" VariableOp="SetNumeric" VariableName="AdvWm_a_One" VariableExpression="(${a1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="21" VariableOp="SetNumeric" VariableName="AdvWm_x_Two" VariableExpression="(${x2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="22" VariableOp="SetNumeric" VariableName="AdvWm_y_Two" VariableExpression="(${y2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="23" VariableOp="SetNumeric" VariableName="AdvWm_z_Two" VariableExpression="(${z2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="24" VariableOp="SetNumeric" VariableName="AdvWm_a_Two" VariableExpression="(${a2})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="25" VariableOp="SetNumeric" VariableName="AdvWm_x_Three" VariableExpression="(${x3})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="26" VariableOp="SetNumeric" VariableName="AdvWm_y_Three" VariableExpression="(${y3})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="27" VariableOp="SetNumeric" VariableName="AdvWm_z_Three" VariableExpression="(${z3})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="28" VariableOp="SetNumeric" VariableName="AdvWm_a_Three" VariableExpression="(${a1})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="29" VariableOp="SetNumeric" VariableName="AdvWm_x_Four" VariableExpression="(${x4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="30" VariableOp="SetNumeric" VariableName="AdvWm_y_Four" VariableExpression="(${y4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="31" VariableOp="SetNumeric" VariableName="AdvWm_z_Four" VariableExpression="(${z4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="32" VariableOp="SetNumeric" VariableName="AdvWm_a_Four" VariableExpression="(${a4})" ActionType="Variable" Asynchronous="False" />
+                  <Action OrderNumber="33" ActionType="Placeholder" Description="加权计算坐标   转换为 JSON 格式" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="34" ListVariableOp="Build" ListVariableExpression=",A,B,C,D,One,Two,Three,Four" ListVariableTarget="AdvWm_abs" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="35" ListVariableOp="Filter" ListVariableExpressionType="Numeric" ListVariableName="AdvWm_abs" ListVariableExpression="${f:length:${${_this}}} != 0" ListVariableTarget="AdvWm_abs" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="36" ListVariableOp="SetAll" ListVariableName="AdvWm_abs" ListVariableExpression="&quot;${_this}&quot;: {&#xD;&#xA;    &quot;X&quot;:${var:AdvWm_x_${_this}}, &#xD;&#xA;    &quot;Y&quot;:${var:AdvWm_z_${_this}}, &#xD;&#xA;    &quot;Z&quot;:${var:AdvWm_y_${_this}}, &#xD;&#xA;    &quot;Active&quot;:${var:AdvWm_a_${_this}}&#xD;&#xA;}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="37" ActionType="Placeholder" Description="输出" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="38" VariableOp="SetString" VariableName="AdvWm_json" VariableExpression="{&#xD;&#xA;${l:AdvWm_abs.join(&quot;,⏎&quot;)}&#xD;&#xA;}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="39" VariableOp="Clipboard" VariableName="AdvWm_json" Enabled="False" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="40" NamedCallbackName="place" NamedCallbackParam="${v:AdvWm_json}" VariableOp="SetString" ActionType="NamedCallback" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="41" VariableOp="UnsetRegexUniversal" VariableName="^AdvWm" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="ffa0c755-27ad-4dfd-9d21-a32ebd9192ce" Name="控制" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="重复检测" Id="5be2d305-8c3e-43a9-8f2d-9318d0f8e372" RegularExpression="^AdvWm_testUnique:request">
+                <Actions>
+                  <Action OrderNumber="1" LogMessageText="AdvWm_testUnique:reply" LogProcess="True" ActionType="LogMessage">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="false" Source="None" Name="【使用须知】" Id="f73afb29-6f48-408b-bded-34e6d1a57618" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ActionType="Placeholder" Description="本组触发器是 Triggernometry 中需要复杂场地标点的科技的前置依赖项。" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ActionType="Placeholder" Description="用于场地标点的平面几何计算，并控制鲶鱼精邮差修改本地场地标点。" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ActionType="Placeholder" Description="1. 触发器版本需高于（不含） 1.1.7.3 （不然也没法导入" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ActionType="Placeholder" Description="2. 确认安装了正确版本的鲶鱼精邮差" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ActionType="Placeholder" Description="务必保证你的触发器中不存在多个该工具，如版本更新时忘记删除。" DescBgColor="faa" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ActionType="Placeholder" Description="by 阿洛 MnFeN" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ActionType="Placeholder" Description="有问题加群：556836295" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1141$" Id="da8597d8-2a5d-4609-b890-70f3c31737a7" ZoneFilterRegularExpression="by MnFeN" Name="极高贝扎宝宝椅 v2.1 by MnFeN" Enabled="true">
+        <Folders>
+          <Folder Id="cf66741f-a632-4c02-a279-87aca7efb2e5" Name="击退踩塔" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="0. 初始化" Id="607e80fe-0cd1-465c-a643-76ce102d8369" RegularExpression="^.{15}\S+ 104:1:1">
+                <Actions>
+                  <Action OrderNumber="1" VariableName="Golbez_1B_first" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="^Golbez_towers" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="1. 获取点名" Id="b90884a4-70bb-42a6-b41d-c076750e8704" RegularExpression="^.{15}\S+ 1B:.{8}:(?&lt;PN&gt;[^:]+):.{9}:(?&lt;type&gt;.{4}):">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Golbez_1B_first" VariableExpression="hex2dec(${type})" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:Golbez_1B_first}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" LogMessageText="Golbez_towers:${PN}:${numeric:hex2dec(${type}) - ${var:Golbez_1B_first} - 129}" LogProcess="True" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="hex2dec(${type}) - ${var:Golbez_1B_first}" ExpressionTypeL="Numeric" ExpressionR="^(129|130)$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="2. 播报点名" Id="55e830bd-266a-48d6-9728-17675d07a16f" RegularExpression="^Golbez_towers:(?&lt;PN&gt;[^:]+):(?&lt;type&gt;[01])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Golbez_towers_markers_n" VariableExpression="0${var:Golbez_towers_markers_n} + 1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="核爆，远离塔" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="击退点名，站中间" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetString" VariableName="Golbez_towers_marked" VariableExpression="1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" UseTTSTextExpression="无点名，踩塔" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:Golbez_towers_marked}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_markers_n}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" LogMessageText="AdvWm_abs:A:98:98:0:1:B:96:96:0:1:C:94:94:0:1:D:92:92:0:1:One:102:102:0:1:Two:104:104:0:1:Three:106:106:0:1:Four:108:108:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：主斜" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_markers_n}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${evar:Golbez_towers_marked}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_isMainDiag}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_isMainDiag}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" LogMessageText="AdvWm_abs:A:102:98:0:1:B:104:96:0:1:C:106:94:0:1:D:108:92:0:1:One:98:102:0:1:Two:96:104:0:1:Three:94:106:0:1:Four:92:108:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：副斜" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_isMainDiag}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_markers_n}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${evar:Golbez_towers_marked}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_isMainDiag}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      </ConditionGroup>
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" LogMessageText="AdvWm_abs:A:100:100:0:1:B:100:100:2:1:C:100:100:4:1:D:100:100:6:1:One:100:100:8:1:Two:100:100:10:1:Three:100:100:12:1:Four:100:100:14:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：中心" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" VariableOp="UnsetRegex" VariableName="^Golbez_towers" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_towers_markers_n}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" ActionType="Placeholder" ExecutionDelayExpression="8500">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback" Asynchronous="False" DescBgColor="dff">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="塔位置" Id="22eaddff-3818-4dec-b494-21faab569636" RegularExpression="^.{15}\S+ 105:Change:4.{7}:Heading:[^:]+:PosX:(?&lt;x&gt;89.3[^:]+):PosY:(?&lt;y&gt;89.3[^:]+|110.6[^:]+):PosZ:0.03">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="判断北边的塔 x y 是否相等" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="Golbez_towers_isMainDiag" VariableExpression="round(${x} - ${y}, 2) = 0" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="1293849f-9919-4b6a-affe-178625eeb932" Name="虚空陨石+冰刺" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="1. 生成土球" Id="fef54891-5fe8-4cae-ae5d-add6d71f389d" RegularExpression="^.{15}\S+ 101:.{8}:00010004:0(?&lt;pos&gt;[89])" Description="101:80034E7A:00010004:0[9B]：土球在右上/左下&#xD;&#xA;101:80034E7A:00010004:0[8A]：土球在左上/右下&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Golbez_Terra_n" VariableExpression="0${var:Golbez_Terra_n} + 1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ActionType="Placeholder" Description="第一次：直接报&#xD;&#xA;" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="右下，左上" VariableOp="SetString" VariableName="Golbez_Terra_safe" VariableExpression="左下，右上" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" VariableOp="SetString" VariableName="Golbez_Terra_safe" VariableExpression="右下，左上" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" UseTTSTextExpression="${var:Golbez_Terra_safe}" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_Terra_n}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" ActionType="Placeholder" Description="第一次以后：准备等待冰刺（正北顺 四个斜方向 安全：1）" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" UseTTSTextExpression="右下，左上" VariableOp="SetString" VariableName="temp_safe" VariableExpression="1 0 1 0" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" VariableOp="SetString" VariableName="temp_safe" VariableExpression="0 1 0 1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="9" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" ListVariableOp="Split" ListVariableName="temp_safe" ListVariableExpression=" " ListVariableTarget="Golbez_Terra_safe" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_Terra_n}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" UseTTSTextExpression="右下，左上" VariableName="temp_safe" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="11" ListVariableName="Golbez_Terra_safe" ListVariableExpression=" " ActionType="ListVariable" ExecutionDelayExpression="10000" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_Terra_n}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="0. 初始化" Id="0c2ea139-779c-493e-a552-50880ac1a7fa" RegularExpression="^.{15}\S+ 104:">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^Golbez_(Terra|Arctic)" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="UnsetRegex" ListVariableName="^Golbez_(Terra|Arctic)" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="2. 生成冰刺" Id="819bb85c-d0ce-4ba6-b313-317627554355" RegularExpression="^.{15}\S+ 101:.{8}:00020001:0(?&lt;pos&gt;[0-3])" Description="冰刺：&#xD;&#xA;101:80034E7A:00020001:0[0-7]&#xD;&#xA;00 北 朝左&#xD;&#xA;01 北 朝右&#xD;&#xA;02 东 朝上&#xD;&#xA;03 东 朝下 &#xD;&#xA;04 南 朝左&#xD;&#xA;05 南 朝右&#xD;&#xA;06 西 朝上&#xD;&#xA;07 西 朝下">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="上←00  上→01  右↑02  右↓03  下←04  下→05  左↑06  左↓07   由于土球相关的必定同向，只用前四个判断。" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="Golbez_Arctic_n" VariableExpression="0${var:Golbez_Arctic_n} + 1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" ActionType="Placeholder" Description="位置：正北顺四个斜点索引 1 2 3 4，如果土球安全点列表存在（即刚生成了土球）则执行以下内容：" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" ListVariableOp="Set" ListVariableName="Golbez_Terra_safe" ListVariableExpression="0" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="1|2" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" ListVariableOp="Set" ListVariableName="Golbez_Terra_safe" ListVariableExpression="0" ListVariableIndex="2" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="1|3" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" ListVariableOp="Set" ListVariableName="Golbez_Terra_safe" ListVariableExpression="0" ListVariableIndex="3" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="0|3" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" ListVariableOp="Set" ListVariableName="Golbez_Terra_safe" ListVariableExpression="0" ListVariableIndex="4" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${pos}" ExpressionTypeL="String" ExpressionR="0|2" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" ActionType="Placeholder" Description="计算角度：以左上安全为基准 (-pi)" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="Golbez_Terra_θ" VariableExpression="(2 - ${l:Golbez_Terra_safe.indexof(1)}) * pi / 2" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" UseTTSTextExpression="${f:pick(${l:Golbez_Terra_safe.indexof(1)}): 00, 右上, 右下, 左下, 左上 }" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="11" LogMessageText="AdvWm_rotate:θ:${v:Golbez_Terra_θ}:A:-5:-5:0:1:B:-5:-6.4:0:1:C:-6.4:-6.4:0:1:D:-6.4:-5:0:1:One:-12:-12:0:1:Two:-12:-13.4:0:1:Three:-13.4:-13.4:0:1:Four:-13.4:-12:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：分摊" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="12" ActionType="Placeholder" ExecutionDelayExpression="6400">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback" Asynchronous="False" DescBgColor="dff">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${elvar:Golbez_Terra_safe}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="14" ListVariableName="Golbez_Terra_safe" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" VariableName="Golbez_Terra_θ" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_Arctic_n}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="Debug Log" Id="37f427dd-5843-438f-84ce-3080a306a17c" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" LogMessageText="[00:46:46.904] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="2" LogMessageText="[00:47:03.860] 257 101:80034E7A:00010004:08:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="1 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" LogMessageText="[00:48:01.433] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" LogMessageText="[00:52:08.586] 257 101:80034E7A:00010004:09:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" LogMessageText="[00:52:10.631] 257 101:80034E7A:00020001:03:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="2.0 * 1000" />
+                  <Action OrderNumber="6" LogMessageText="[00:52:47.907] 257 101:80034E7A:00020001:00:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="bb585972-40ec-4d2a-ba14-6a157ebb132e" Name="杂项" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="DoT AoE" Id="2ed10312-b49c-4e27-ad82-62f8a63e4fac" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:84B3">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="流血AoE" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="半场刀" Id="93fda59c-99f0-429c-a9ce-17205e1d9916" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:86DB">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="后，然后前" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="躲避雷" Id="4d7a96f7-709e-40e8-9efe-6b9337b2bcc6" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8468">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="准备躲开原地" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="躲开" ActionType="UseTTS" ExecutionDelayExpression="3400">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="钢铁月环（含绝对北的分散标点）" Id="59a6aa01-f525-434c-be0b-a21ccfb98453" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:(?&lt;SID&gt;847[89]|86E7)">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetString" VariableName="Golbez_Sphere_saved" VariableExpression="钢铁分摊" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="8478" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="Golbez_Sphere_saved" VariableExpression="月环分散" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="8479" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="储存${var:Golbez_Sphere_saved}" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="847[89]" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" UseTTSTextExpression="前后刀，${var:Golbez_Sphere_saved}" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="86E7" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:Golbez_Sphere_saved}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" ActionType="Placeholder" ExecutionDelayExpression="2000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" LogMessageText="AdvWm_rotate:θ:${_entity[${sid}].h}:A:0:-8:0:1:B:8:0:0:1:C:0:8:0:1:D:-8:0:0:1:One:5.66:-5.66:0:1:Two:5.66:5.66:0:1:Three:-5.66:5.66:0:1:Four:-5.66:-5.66:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：相对北的月环分散点 绝对北的可以关掉" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="86E7" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:Golbez_Sphere_saved}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Golbez_Sphere_saved}" ExpressionTypeL="String" ExpressionR="月环分散" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" VariableName="Golbez_Sphere_saved" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="86E7" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" ActionType="Placeholder" ExecutionDelayExpression="10800">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback" Asynchronous="False" DescBgColor="dff">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="三向/分摊" Id="22e6cc1a-bb11-4433-8f87-b780fe005616" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:(?&lt;SID&gt;848[05])">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="职能三向站位" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="8480" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="双组直线分摊" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${SID}" ExpressionTypeL="String" ExpressionR="8485" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="黑牙 多段AoE" Id="6ac8e6f6-4482-4c91-b644-f8f115c95266" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8474:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="多段AoE" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="陨石近战点" Id="1de460e5-09b7-4ec6-9220-e02aff851e7b" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:84A4:">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Asynchronous="False" Description="懒得算东西还是南北了，都标出来x" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" LogMessageText="AdvWm_abs:A:100:90.5:0:1:B:100:109.5:0:1:C:90.5:100:0:1:D:109.5:100:0:1:One:100:93.5:0:1:Two:106.5:100:0:1:Three:100:106.5:0:1:Four:93.5:100:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" DescBgColor="dff">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="3" ActionType="Placeholder" ExecutionDelayExpression="13000" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback" Asynchronous="False" DescBgColor="dff">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="三连劈死刑" Id="dcc8c55e-4408-43ab-909a-4bd2359b6fe0" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:847[89]:">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" ExecutionDelayExpression="5000" Asynchronous="False" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" UseTTSTextExpression="准备死刑换T" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.isT}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.job}" ExpressionTypeL="String" ExpressionR="BLU" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" UseTTSTextExpression="准备死刑" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.isH}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="虚空陨石 双死刑" Id="ab554fdd-589b-4662-b750-9c0722ea4f0a" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:84AD:">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="双死刑" ActionType="UseTTS">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.isTH}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_me.job}" ExpressionTypeL="String" ExpressionR="BLU" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="917c2d70-fb96-47a4-9e30-09dec2011818" Name="0. 控制" Enabled="true">
+            <Folders>
+              <Folder Id="118b39b9-f1c8-43c1-b83d-b42bb254f6d6" Name="标点" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="标点保存" Id="e0b5a9fa-e481-4186-9279-1873667ee7ad" RegularExpression="^.{15}\S+ 1C:" PrevActions="Interrupt">
+                    <Actions>
+                      <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="save" ActionType="NamedCallback" ExecutionDelayExpression="500">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="标点重载" Id="9686fd24-7e09-471a-af1c-b0b39a2ed48d" RegularExpression="^.{15}\S+ 104:1:1">
+                    <Actions>
+                      <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" NamedCallbackName="place" NamedCallbackParam="save" ActionType="NamedCallback" ExecutionDelayExpression="2000">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="初始化" Id="5730e0b7-eebc-4e8a-8f43-9877b5599142" RegularExpression="^.{15}\S+ 104:1:1">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="UnsetRegexUniversal" VariableName="^Golbez_" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="团灭重置" Id="f04844a7-c7f0-4c6a-9950-4d062d161da6" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
+                <Actions>
+                  <Action OrderNumber="1" FolderOp="CancelFolder" FolderId="da8597d8-2a5d-4609-b890-70f3c31737a7" ActionType="Folder">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="f6535623-8ff0-4b3f-872d-86cf287caff0" Name="四连风+冰刺" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="0. 初始化" Id="cd4c7b93-60e5-4296-a1b5-fc6fbae787b3" RegularExpression="^.{15}\S+ 104:">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="风球是重复利用的 第二次风球没移动的话不会产生0x105日志 所以不能每次初始化" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="UnsetRegexUniversal" VariableName="^Golbez_Sphere" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="2. 计算安全点" Id="942088f4-9f68-4534-8d78-d1b2d37270c4" RegularExpression="^Golbez_Sphere:getSafeSpots$" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="5000" Description="[02:37:06.242] StartsCasting 14:40021C81:Golbez:844D:Gale Sphere:40021C81:Golbez:2.700:99.99:99.99:0.03:-3.11&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C78:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C7A:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C73:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C79:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C72:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C7B:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C71:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C70:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C6F:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C6E:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C6D:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C6C:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C75:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C77:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C74:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300&#xD;&#xA;[02:37:16.411] 261 105:Change:40021C76:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300&#xD;&#xA;[02:41:52.615] StartsCasting 14:40021C81:Golbez:844D:Gale Sphere:40021C81:Golbez:2.700:99.99:99.99:0.03:3.11&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C7B:Heading:-3.1416:PosX:112.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C79:Heading:-3.1416:PosX:107.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C7A:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C78:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C73:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C72:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C71:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.704] 261 105:Change:40021C70:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.824] 261 105:Change:40021C6F:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.824] 261 105:Change:40021C6E:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.824] 261 105:Change:40021C6D:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300&#xD;&#xA;[02:42:02.824] 261 105:Change:40021C6C:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300&#xD;&#xA;">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="禁止重复触发；描述里有测试日志" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ActionType="SystemBeep">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" ActionType="Placeholder" Description="字典转化为 40XXXXXX:n 的列表，排序，提取n：" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" ListVariableOp="Build" ListVariableExpression=",${d:Golbez_Sphere.joinall(&quot;:&quot;,&quot;,&quot;)}" ListVariableTarget="Golbez_Sphere" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" ListVariableOp="SortAlphaDesc" ListVariableName="Golbez_Sphere" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" ListVariableOp="SortAlphaDesc" NamedCallbackName="command" NamedCallbackParam="/${pvar:调试频道} ${l:Golbez_Sphere_raw.join(&quot;, &quot;)}" Enabled="False" ActionType="NamedCallback" Asynchronous="False" DescBgColor="faa">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" ListVariableOp="SetAll" ListVariableName="Golbez_Sphere" ListVariableExpression="${f:slice(9):${_this}}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" ActionType="Placeholder" Description="每条边六个球：123456 六选四，(18 - 四个球位置和)/4 = 0 或 1 或 2 即为 左/中/右 安全区" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="Golbez_Sphere_safe1" VariableExpression="(18 - ${lvar:Golbez_Sphere.sum(:5)}) / 4" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="Golbez_Sphere_safe2" VariableExpression="(18 - ${lvar:Golbez_Sphere.sum(5:9)}) / 4" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" VariableOp="SetNumeric" VariableName="Golbez_Sphere_safe3" VariableExpression="(18 - ${lvar:Golbez_Sphere.sum(9:13)}) / 4" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" VariableOp="SetNumeric" VariableName="Golbez_Sphere_safe4" VariableExpression="(18 - ${lvar:Golbez_Sphere.sum(13:)}) / 4" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" ActionType="Placeholder" Description="标点数据   x1 x2 取值：95或105 ± 1.25，  y3 y4取值：93.75 106.25。  第 1 3 4 次标点平行于 AoE 1*6， 第 2 次安全半场 2*3" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" VariableOp="SetNumeric" VariableName="Golbez_Sphere_wm_x1" VariableExpression="90 + 6.25 * ${v:Golbez_Sphere_safe1} + 3.75 * ${v:Golbez_Sphere_safe2}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" VariableOp="SetNumeric" VariableName="Golbez_Sphere_wm_x2" VariableExpression="90 + 3.75 * ${v:Golbez_Sphere_safe1} + 6.25 * ${v:Golbez_Sphere_safe2}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" VariableOp="SetNumeric" VariableName="Golbez_Sphere_wm_x2'" VariableExpression="90 + 1.25 * ${v:Golbez_Sphere_safe1} + 8.75 * ${v:Golbez_Sphere_safe2}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" VariableOp="SetNumeric" VariableName="Golbez_Sphere_wm_y3" VariableExpression="93.75 + 6.25 * ${v:Golbez_Sphere_safe3}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" VariableOp="SetNumeric" VariableName="Golbez_Sphere_wm_y4" VariableExpression="93.75 + 6.25 * ${v:Golbez_Sphere_safe4}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="19" ActionType="Placeholder" Description="两次播报文本：X穿X" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="20" VariableOp="SetString" VariableName="Golbez_Sphere_safe12str" VariableExpression="${f:pick(${var:Golbez_Sphere_safe1}):左, 中, 右}穿${f:pick(${var:Golbez_Sphere_safe2}):左, 中, 右}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="21" VariableOp="SetString" VariableName="Golbez_Sphere_safe34str" VariableExpression="${f:pick(${var:Golbez_Sphere_safe3}):上, 中, 下}穿${f:pick(${var:Golbez_Sphere_safe4}):上, 中, 下}" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="22" ActionType="Placeholder" Description="播报" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="23" UseTTSTextExpression="${var:Golbez_Sphere_safe12str}，然后${var:Golbez_Sphere_safe34str}" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="24" LogMessageText="AdvWm_abs:A:100:86.25:0:1:B:${v:Golbez_Sphere_wm_x1}:92.5:0:1:C:100:113.75:0:1:D:${v:Golbez_Sphere_wm_x1}:95.5:0:1:One:${v:Golbez_Sphere_wm_x1}:98.5:0:1:Two:${v:Golbez_Sphere_wm_x1}:101.5:0:1:Three:${v:Golbez_Sphere_wm_x1}:104.5:0:1:Four:${v:Golbez_Sphere_wm_x1}:107.5:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：#1" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="25" ActionType="Placeholder" ExecutionDelayExpression="5500" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="26" ActionType="Placeholder" Description="计算前两次安全区的左右半场中 冰刺的安全方向（上/下）" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="27" VariableOp="SetNumeric" VariableName="Golbez_Sphere_wm_isSouth2" VariableExpression="${v:Golbez_Arctic_isMainDiagSafe} = (${v:Golbez_Sphere_wm_x2} &gt; 100) ? 1 : -1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="28" LogMessageText="AdvWm_abs:A:100:86.25:0:1:B:${v:Golbez_Sphere_wm_x2'}:${n:100 + 1.25 * ${v:Golbez_Sphere_wm_isSouth2}}:0:1:C:100:113.75:0:1:D:${v:Golbez_Sphere_wm_x2'}:${n:100 + 4.25 * ${v:Golbez_Sphere_wm_isSouth2}}:0:1:One:${v:Golbez_Sphere_wm_x2'}:${n:100 + 7.25 * ${v:Golbez_Sphere_wm_isSouth2}}:0:1:Two:${v:Golbez_Sphere_wm_x2}:${n:100 + 1.25 * ${v:Golbez_Sphere_wm_isSouth2}}:0:1:Three:${v:Golbez_Sphere_wm_x2}:${n:100 + 7.25 * ${v:Golbez_Sphere_wm_isSouth2}}:0:1:Four:${v:Golbez_Sphere_wm_x2}:${n:100 + 4.25 * ${v:Golbez_Sphere_wm_isSouth2}}:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：#2" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="29" ActionType="Placeholder" ExecutionDelayExpression="1500" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="30" UseTTSTextExpression="${var:Golbez_Sphere_safe34str}" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="31" ActionType="Placeholder" ExecutionDelayExpression="1500" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="32" LogMessageText="AdvWm_abs:A:100:86.25:0:1:B:92.5:${v:Golbez_Sphere_wm_y3}:0:1:C:100:113.75:0:1:D:95.5:${v:Golbez_Sphere_wm_y3}:0:1:One:98.5:${v:Golbez_Sphere_wm_y3}:0:1:Two:101.5:${v:Golbez_Sphere_wm_y3}:0:1:Three:104.5:${v:Golbez_Sphere_wm_y3}:0:1:Four:107.5:${v:Golbez_Sphere_wm_y3}:0:1&#xD;&#xA;" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：#3" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="33" ActionType="Placeholder" ExecutionDelayExpression="3500" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="34" LogMessageText="AdvWm_abs:A:100:86.25:0:1:B:92.5:${v:Golbez_Sphere_wm_y4}:0:1:C:100:113.75:0:1:D:95.5:${v:Golbez_Sphere_wm_y4}:0:1:One:98.5:${v:Golbez_Sphere_wm_y4}:0:1:Two:101.5:${v:Golbez_Sphere_wm_y4}:0:1:Three:104.5:${v:Golbez_Sphere_wm_y4}:0:1:Four:107.5:${v:Golbez_Sphere_wm_y4}:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：#4" DescBgColor="dff" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="35" VariableOp="UnsetRegex" VariableName="^Golbez_Sphere" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="36" ListVariableName="Golbez_Sphere" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="37" ActionType="Placeholder" ExecutionDelayExpression="4500" DescBgColor="ffd">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="38" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback" Asynchronous="False" DescBgColor="dff">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="1. 检测实体" Id="0e31e124-0cf3-463f-9555-18d3bdf29ace" RegularExpression="^.{15}\S+ 105:Change:(?&lt;id&gt;4.{7}):Heading:[^:]+:PosX:(?&lt;x&gt;85\.0000|115\.0000|\d+[27]\.5000):PosY:(?&lt;y&gt;85\.0000|115\.0000|\d+[27]\.5000):">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="0x105 比 0x14 快两秒" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" ActionType="Placeholder" Description="一共 16 个实体，每边四个（两组），位于这条边的左中右三组可能位置" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" ActionType="Placeholder" Description="id 顺序决定施放顺序：id 最大的四个最快 " DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" ActionType="Placeholder" Description="temp_pos：每条边从左到右 / 上到下：1-6" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" ActionType="Placeholder" Description="字典记录内容：id: pos    如 40000001: 4 代表是这条边第四个位置有 id = 40000001 的球" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" DictVariableOp="Set" DictVariableValueType="Numeric" DictVariableName="Golbez_Sphere" DictVariableKey="${id}" DictVariableValue="(abs(${x}-100) != 15) ? (${x}-82.5)/5 : (${y}-82.5)/5" ActionType="DictVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="7" ActionType="Placeholder" Description="由于 0x105 偶尔会产生两条重复日志，即便第一次也不能计数触发，只能加一个延迟。" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" LogMessageText="Golbez_Sphere:getSafeSpots" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${d:Golbez_Sphere.size}" ExpressionTypeL="Numeric" ExpressionR="16" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="9" LogProcess="True" UseTTSTextExpression="自己看，缺数据" ActionType="UseTTS" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${d:Golbez_Sphere.size}" ExpressionTypeL="Numeric" ExpressionR="16" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="生成冰刺" Id="73e762f6-bb5e-4644-af3f-cb21cd26dcd4" RegularExpression="^.{15}\S+ 101:.{8}:00020001:0(?&lt;pos&gt;[0-3])" Description="冰刺：&#xD;&#xA;101:80034E7A:00020001:0[0-7]&#xD;&#xA;00 北 朝左&#xD;&#xA;01 北 朝右&#xD;&#xA;02 东 朝上&#xD;&#xA;03 东 朝下 &#xD;&#xA;04 南 朝左&#xD;&#xA;05 南 朝右&#xD;&#xA;06 西 朝上&#xD;&#xA;07 西 朝下">
+                <Actions>
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="上←00  上→01  右↑02  右↓03  下←04  下→05  左↑06  左↓07   由于风球相关的必定反向，只用前四个判断。" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="Golbez_Arctic_isMainDiagSafe" VariableExpression="${pos} = 1 || ${pos} = 2" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" VariableName="Golbez_Arctic_isMainDiagSafe" ActionType="Variable" ExecutionDelayExpression="15000" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="Debug Log" Id="b2cc35b9-65db-4821-8166-3229b3520cd9" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" LogMessageText="[00:46:46.904] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="2" LogMessageText="[00:47:56.032] 261 105:Change:40002DE9:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.2 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" LogMessageText="[00:47:56.032] 261 105:Change:40002DEA:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="4" LogMessageText="[00:47:56.032] 261 105:Change:40002DE8:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="5" LogMessageText="[00:47:56.032] 261 105:Change:40002DE7:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="6" LogMessageText="[00:47:56.032] 261 105:Change:40002DE5:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="7" LogMessageText="[00:47:56.032] 261 105:Change:40002DE6:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="8" LogMessageText="[00:47:56.032] 261 105:Change:40002DE4:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="9" LogMessageText="[00:47:56.032] 261 105:Change:40002DE3:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="10" LogMessageText="[00:47:56.032] 261 105:Change:40002DF2:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="11" LogMessageText="[00:47:56.032] 261 105:Change:40002DEE:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="12" LogMessageText="[00:47:56.032] 261 105:Change:40002DEF:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="13" LogMessageText="[00:47:56.032] 261 105:Change:40002DEB:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="14" LogMessageText="[00:47:56.032] 261 105:Change:40002DEC:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="15" LogMessageText="[00:47:56.032] 261 105:Change:40002DF0:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="16" LogMessageText="[00:47:56.032] 261 105:Change:40002DF1:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="17" LogMessageText="[00:47:56.032] 261 105:Change:40002DED:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="18" LogMessageText="[00:48:01.433] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.4 * 1000" />
+                  <Action OrderNumber="19" LogMessageText="[00:52:42.398] 261 105:Change:40002DF0:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="20 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="20" LogMessageText="[00:52:42.398] 261 105:Change:40002DEF:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="21" LogMessageText="[00:52:42.398] 261 105:Change:40002DEB:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="22" LogMessageText="[00:52:42.398] 261 105:Change:40002DEE:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="23" LogMessageText="[00:52:42.398] 261 105:Change:40002DED:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="24" LogMessageText="[00:52:42.398] 261 105:Change:40002DEC:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="25" LogMessageText="[00:52:42.398] 261 105:Change:40002DF2:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="26" LogMessageText="[00:52:42.398] 261 105:Change:40002DF1:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="27" LogMessageText="[00:52:47.907] 257 101:80034E7A:00020001:00:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.5 * 1000" />
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="false" Name="Debug Log" Id="b2b4e6a0-5752-48b1-92c5-abc9e9c212e6" RegularExpression="">
+                <Actions>
+                  <Action OrderNumber="1" LogMessageText="[00:07:26.635] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="2" LogMessageText="[00:08:35.551] 261 105:Change:40016E54:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.5 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" LogMessageText="[00:08:35.551] 261 105:Change:40016E58:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="4" LogMessageText="[00:08:35.551] 261 105:Change:40016E56:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="5" LogMessageText="[00:08:35.551] 261 105:Change:40016E59:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="6" LogMessageText="[00:08:35.551] 261 105:Change:40016E53:Heading:-3.1416:PosX:107.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="7" LogMessageText="[00:08:35.551] 261 105:Change:40016E57:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="8" LogMessageText="[00:08:35.551] 261 105:Change:40016E52:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="9" LogMessageText="[00:08:35.551] 261 105:Change:40016E51:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="10" LogMessageText="[00:08:35.551] 261 105:Change:40016E55:Heading:-3.1416:PosX:112.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="11" LogMessageText="[00:08:35.551] 261 105:Change:40016E50:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="12" LogMessageText="[00:08:35.551] 261 105:Change:40016E4D:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="13" LogMessageText="[00:08:35.551] 261 105:Change:40016E4E:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="14" LogMessageText="[00:08:35.551] 261 105:Change:40016E4F:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="15" LogMessageText="[00:08:35.551] 261 105:Change:40016E4F:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="16" LogMessageText="[00:08:35.551] 261 105:Change:40016E4C:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="17" LogMessageText="[00:08:35.551] 261 105:Change:40016E4A:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="18" LogMessageText="[00:08:35.551] 261 105:Change:40016E4B:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="19" LogMessageText="[00:08:41.085] 257 101:80034E7A:00020001:03:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.5 * 1000" />
+                  <Action OrderNumber="20" LogMessageText="[00:13:21.942] 261 105:Change:40016E59:Heading:-3.1416:PosX:112.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="20 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="21" LogMessageText="[00:13:21.942] 261 105:Change:40016E58:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="22" LogMessageText="[00:13:21.942] 261 105:Change:40016E57:Heading:-3.1416:PosX:107.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="23" LogMessageText="[00:13:21.942] 261 105:Change:40016E54:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="24" LogMessageText="[00:13:21.942] 261 105:Change:40016E56:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="25" LogMessageText="[00:13:21.942] 261 105:Change:40016E55:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="26" LogMessageText="[00:13:21.942] 261 105:Change:40016E53:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="27" LogMessageText="[00:13:21.942] 261 105:Change:40016E52:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="28" LogMessageText="[00:13:21.942] 261 105:Change:40016E51:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="29" LogMessageText="[00:13:21.942] 261 105:Change:40016E50:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="30" LogMessageText="[00:13:21.942] 261 105:Change:40016E4F:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="31" LogMessageText="[00:13:21.942] 261 105:Change:40016E4E:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="32" LogMessageText="[00:13:21.942] 261 105:Change:40016E4D:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="33" LogMessageText="[00:13:21.942] 261 105:Change:40016E4C:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="34" LogMessageText="[00:13:21.942] 261 105:Change:40016E4B:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="35" LogMessageText="[00:13:21.942] 261 105:Change:40016E4A:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="36" LogMessageText="[00:13:27.494] 257 101:80034E7A:00020001:03:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.6 * 1000" />
+                  <Action OrderNumber="37" LogMessageText="[00:16:05.555] 261 105:Change:40016E58:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="20 * 1000">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="38" LogMessageText="[00:16:05.555] 261 105:Change:40016E56:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="39" LogMessageText="[00:16:05.555] 261 105:Change:40016E55:Heading:0.0000:PosX:97.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="40" LogMessageText="[00:16:05.555] 261 105:Change:40016E53:Heading:0.0000:PosX:102.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="41" LogMessageText="[00:16:05.555] 261 105:Change:40016E51:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="42" LogMessageText="[00:16:05.555] 261 105:Change:40016E50:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="43" LogMessageText="[00:16:05.555] 261 105:Change:40016E4F:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="44" LogMessageText="[00:16:05.555] 261 105:Change:40016E4E:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="45" LogMessageText="[00:16:05.555] 261 105:Change:40016E4D:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="46" LogMessageText="[00:16:05.555] 261 105:Change:40016E4C:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="47" LogMessageText="[00:16:05.555] 261 105:Change:40016E4B:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="48" LogMessageText="[00:16:05.555] 261 105:Change:40016E4A:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="49" LogMessageText="[00:16:11.248] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.7 * 1000" />
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="false" Source="None" Name="精准初始场地标点（右键执行）  执行后为本地可见，存入游戏预设并载入后全队可见" Id="b2540bef-b530-437e-adc1-217ee5220cf7" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="{&#xD;&#xA;  &quot;A&quot;:{&quot;X&quot;:100, &quot;Y&quot;:0, &quot;Z&quot;:87, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;B&quot;:{&quot;X&quot;:113, &quot;Y&quot;:0, &quot;Z&quot;:100, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;C&quot;:{&quot;X&quot;:100, &quot;Y&quot;:0, &quot;Z&quot;:113, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;D&quot;:{&quot;X&quot;:87, &quot;Y&quot;:0, &quot;Z&quot;:100, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;One&quot;:{&quot;X&quot;:103.9, &quot;Y&quot;:0, &quot;Z&quot;:96.1, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;Two&quot;:{&quot;X&quot;:103.9, &quot;Y&quot;:0, &quot;Z&quot;:103.9, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;Three&quot;:{&quot;X&quot;:96.1, &quot;Y&quot;:0, &quot;Z&quot;:103.9, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;Four&quot;:{&quot;X&quot;:96.1, &quot;Y&quot;:0, &quot;Z&quot;:96.1, &quot;Active&quot;:1}&#xD;&#xA;}" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Source="None" Name="使用须知" Id="63940f9d-b593-41d6-93de-b97231ac8c33" RegularExpression="^.{15}\S+ ？">
+            <Actions>
+              <Action OrderNumber="1" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ActionType="Placeholder" Description="使用需求：" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ActionType="Placeholder" Description="· Triggernometry 触发器版本 &gt; 1.1.7.3 （截至国服 6.4 开服，官方作者尚未合并更新 1.1.7.3 以后的内容。可以暂时在 QQ 群 556836295 下载）" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ActionType="Placeholder" Description="· 鲶鱼精邮差 PostNamazu 版本 1.3.2.6+" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ActionType="Placeholder" Description="· （触发器）高级标点工具箱 AdvWm v2.0+ " DescBgColor="faa" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ActionType="Placeholder" Description="团灭前如果标点改了，团灭后不会立刻恢复，属于正常现象，开怪就恢复了。" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ActionType="Placeholder" Description="by 阿洛 MnFeN" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ActionType="Placeholder" Description="有问题加群：556836295" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>

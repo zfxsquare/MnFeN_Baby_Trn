@@ -78,7 +78,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${wm}" ExpressionTypeL="String" ExpressionR="[A-D1-4]{2,8}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="线性插值标点 linearConnect" Id="760b7865-2b82-47cf-9cee-2a50a87056cf" RegularExpression="^AdvWm_linearConnect:start:(?&lt;x0&gt;[^:]+):(?&lt;y0&gt;[^:]+):(?&lt;z0&gt;[^:]+):end:(?&lt;x1&gt;[^:]+):(?&lt;y1&gt;[^:]+):(?&lt;z1&gt;[^:]+):waymarkers:(?&lt;wm&gt;[^:]+)">
                 <Actions>
@@ -124,7 +123,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${wm}" ExpressionTypeL="String" ExpressionR="[A-D1-4]{2,8}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="旋转矩阵标点 rotate" Id="5311c8d1-43e5-46b6-9bb6-2ab3bde3b456" RegularExpression="^AdvWm_rotate(?::θ:(?&lt;theta&gt;[^:]*))?(?::Center:(?&lt;x0&gt;[^:]*):(?&lt;y0&gt;[^:]*):(?&lt;z0&gt;[^:]*))?(?&lt;A&gt;:A:(?&lt;xa&gt;[^:]*):(?&lt;ya&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;xb&gt;[^:]*):(?&lt;yb&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;xc&gt;[^:]*):(?&lt;yc&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;xd&gt;[^:]*):(?&lt;yd&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;x1&gt;[^:]*):(?&lt;y1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;x2&gt;[^:]*):(?&lt;y2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;x3&gt;[^:]*):(?&lt;y3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;x4&gt;[^:]*):(?&lt;y4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
                 <Actions>
@@ -216,7 +214,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="绝对坐标标点 abs" Id="5c439cf2-5e58-48bb-a1da-d9321b4a458a" RegularExpression="^AdvWm_abs(?&lt;A&gt;:A:(?&lt;xa&gt;[^:]*):(?&lt;ya&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;xb&gt;[^:]*):(?&lt;yb&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;xc&gt;[^:]*):(?&lt;yc&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;xd&gt;[^:]*):(?&lt;yd&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;x1&gt;[^:]*):(?&lt;y1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;x2&gt;[^:]*):(?&lt;y2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;x3&gt;[^:]*):(?&lt;y3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;x4&gt;[^:]*):(?&lt;y4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
                 <Actions>
@@ -281,7 +278,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -295,7 +291,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -341,16 +336,15 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1141$" Id="da8597d8-2a5d-4609-b890-70f3c31737a7" ZoneFilterRegularExpression="by MnFeN" Name="极高贝扎宝宝椅 v2.1 by MnFeN" Enabled="true">
+      <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1141$" Id="38e27749-3916-45d8-8fee-cfbaf5068002" ZoneFilterRegularExpression="by MnFeN" Name="极高贝扎宝宝椅 v2.2 by MnFeN" Enabled="true">
         <Folders>
-          <Folder Id="cf66741f-a632-4c02-a279-87aca7efb2e5" Name="击退踩塔" Enabled="true">
+          <Folder Id="9b785fe8-61d3-4ab5-8851-271af27e5d19" Name="击退踩塔" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="0. 初始化" Id="607e80fe-0cd1-465c-a643-76ce102d8369" RegularExpression="^.{15}\S+ 104:1:1">
+              <Trigger Enabled="true" Name="0. 初始化" Id="22b4f528-5b77-4646-9fdd-aa123a35fa74" RegularExpression="^.{15}\S+ 104:1:1">
                 <Actions>
                   <Action OrderNumber="1" VariableName="Golbez_1B_first" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -362,7 +356,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="1. 获取点名" Id="b90884a4-70bb-42a6-b41d-c076750e8704" RegularExpression="^.{15}\S+ 1B:.{8}:(?&lt;PN&gt;[^:]+):.{9}:(?&lt;type&gt;.{4}):">
+              <Trigger Enabled="true" Name="1. 获取点名" Id="549ff6ac-9d3a-4ef1-b34f-0d1c9c93e0a8" RegularExpression="^.{15}\S+ 1B:.{8}:(?&lt;PN&gt;[^:]+):.{9}:(?&lt;type&gt;.{4}):">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Golbez_1B_first" VariableExpression="hex2dec(${type})" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
@@ -378,7 +372,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2. 播报点名" Id="55e830bd-266a-48d6-9728-17675d07a16f" RegularExpression="^Golbez_towers:(?&lt;PN&gt;[^:]+):(?&lt;type&gt;[01])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
+              <Trigger Enabled="true" Name="2. 播报点名" Id="0a43ed1c-e321-4fd8-9b92-145565ae219a" RegularExpression="^Golbez_towers:(?&lt;PN&gt;[^:]+):(?&lt;type&gt;[01])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Golbez_towers_markers_n" VariableExpression="0${var:Golbez_towers_markers_n} + 1" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -455,7 +449,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="塔位置" Id="22eaddff-3818-4dec-b494-21faab569636" RegularExpression="^.{15}\S+ 105:Change:4.{7}:Heading:[^:]+:PosX:(?&lt;x&gt;89.3[^:]+):PosY:(?&lt;y&gt;89.3[^:]+|110.6[^:]+):PosZ:0.03">
+              <Trigger Enabled="true" Name="塔位置" Id="8ac5466c-61c9-4a8f-8138-594b42d218c5" RegularExpression="^.{15}\S+ 105:Change:4.{7}:Heading:[^:]+:PosX:(?&lt;x&gt;89.3[^:]+):PosY:(?&lt;y&gt;89.3[^:]+|110.6[^:]+):PosZ:0.03">
                 <Actions>
                   <Action OrderNumber="1" ActionType="Placeholder" Description="判断北边的塔 x y 是否相等" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -469,10 +463,10 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="1293849f-9919-4b6a-affe-178625eeb932" Name="虚空陨石+冰刺" Enabled="true">
+          <Folder Id="9c8930ff-bd1f-4327-a774-d5ef8257930f" Name="虚空陨石+冰刺" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="1. 生成土球" Id="fef54891-5fe8-4cae-ae5d-add6d71f389d" RegularExpression="^.{15}\S+ 101:.{8}:00010004:0(?&lt;pos&gt;[89])" Description="101:80034E7A:00010004:0[9B]：土球在右上/左下&#xD;&#xA;101:80034E7A:00010004:0[8A]：土球在左上/右下&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+              <Trigger Enabled="true" Name="1. 生成土球" Id="d804abd9-50e2-4a0a-8c5a-fac192f9b7bb" RegularExpression="^.{15}\S+ 101:.{8}:00010004:0(?&lt;pos&gt;[89])" Description="101:80034E7A:00010004:0[9B]：土球在右上/左下&#xD;&#xA;101:80034E7A:00010004:0[8A]：土球在左上/右下&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Golbez_Terra_n" VariableExpression="0${var:Golbez_Terra_n} + 1" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -525,7 +519,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="0. 初始化" Id="0c2ea139-779c-493e-a552-50880ac1a7fa" RegularExpression="^.{15}\S+ 104:">
+              <Trigger Enabled="true" Name="0. 初始化" Id="fc13052b-be49-4c49-ba83-a0e4ff788011" RegularExpression="^.{15}\S+ 104:">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="^Golbez_(Terra|Arctic)" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -537,7 +531,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2. 生成冰刺" Id="819bb85c-d0ce-4ba6-b313-317627554355" RegularExpression="^.{15}\S+ 101:.{8}:00020001:0(?&lt;pos&gt;[0-3])" Description="冰刺：&#xD;&#xA;101:80034E7A:00020001:0[0-7]&#xD;&#xA;00 北 朝左&#xD;&#xA;01 北 朝右&#xD;&#xA;02 东 朝上&#xD;&#xA;03 东 朝下 &#xD;&#xA;04 南 朝左&#xD;&#xA;05 南 朝右&#xD;&#xA;06 西 朝上&#xD;&#xA;07 西 朝下">
+              <Trigger Enabled="true" Name="2. 生成冰刺" Id="f2df54ef-fc76-4ed8-a1a0-62efe32ad25e" RegularExpression="^.{15}\S+ 101:.{8}:00020001:0(?&lt;pos&gt;[0-3])" Description="冰刺：&#xD;&#xA;101:80034E7A:00020001:0[0-7]&#xD;&#xA;00 北 朝左&#xD;&#xA;01 北 朝右&#xD;&#xA;02 东 朝上&#xD;&#xA;03 东 朝下 &#xD;&#xA;04 南 朝左&#xD;&#xA;05 南 朝右&#xD;&#xA;06 西 朝上&#xD;&#xA;07 西 朝下">
                 <Actions>
                   <Action OrderNumber="1" ActionType="Placeholder" Description="上←00  上→01  右↑02  右↓03  下←04  下→05  左↑06  左↓07   由于土球相关的必定同向，只用前四个判断。" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -610,7 +604,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="Debug Log" Id="37f427dd-5843-438f-84ce-3080a306a17c" RegularExpression="">
+              <Trigger Enabled="false" Name="Debug Log" Id="48dc4973-d397-4a60-8fbb-6837897d4f8e" RegularExpression="">
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="[00:46:46.904] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                   <Action OrderNumber="2" LogMessageText="[00:47:03.860] 257 101:80034E7A:00010004:08:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="1 * 1000">
@@ -632,10 +626,10 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="bb585972-40ec-4d2a-ba14-6a157ebb132e" Name="杂项" Enabled="true">
+          <Folder Id="f2245c74-eeb8-41ca-a96a-63e240464dd4" Name="杂项" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="DoT AoE" Id="2ed10312-b49c-4e27-ad82-62f8a63e4fac" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:84B3">
+              <Trigger Enabled="true" Name="DoT AoE" Id="fe9209fb-4570-4787-9bb7-66a8f2e1cb29" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:84B3">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="流血AoE" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -644,7 +638,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="半场刀" Id="93fda59c-99f0-429c-a9ce-17205e1d9916" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:86DB">
+              <Trigger Enabled="true" Name="半场刀" Id="c1632b05-d1d2-420c-8f8d-3d5f117120eb" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:86DB">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="后，然后前" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -653,7 +647,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="躲避雷" Id="4d7a96f7-709e-40e8-9efe-6b9337b2bcc6" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8468">
+              <Trigger Enabled="true" Name="躲避雷" Id="e0ad160c-e3e6-4489-b48f-da511c5ff0e5" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8468">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="准备躲开原地" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -665,7 +659,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="钢铁月环（含绝对北的分散标点）" Id="59a6aa01-f525-434c-be0b-a21ccfb98453" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:(?&lt;SID&gt;847[89]|86E7)">
+              <Trigger Enabled="true" Name="钢铁月环（含绝对北的分散标点）" Id="b1eec965-a096-4a2c-80a6-b4b8927fd7d9" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:(?&lt;SID&gt;847[89]|86E7)">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="Golbez_Sphere_saved" VariableExpression="钢铁分摊" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
@@ -713,7 +707,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="三向/分摊" Id="22e6cc1a-bb11-4433-8f87-b780fe005616" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:(?&lt;SID&gt;848[05])">
+              <Trigger Enabled="true" Name="三向/分摊" Id="5d192da1-cd0d-4ba1-ac2a-ac9d104a5e78" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:(?&lt;SID&gt;848[05])">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="职能三向站位" ActionType="UseTTS" Asynchronous="False">
                     <Condition Enabled="true" Grouping="And">
@@ -729,7 +723,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="黑牙 多段AoE" Id="6ac8e6f6-4482-4c91-b644-f8f115c95266" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8474:">
+              <Trigger Enabled="true" Name="黑牙 多段AoE" Id="0ebe277d-f14e-4ad7-a039-341df49c40f1" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8474:">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="多段AoE" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -790,12 +784,12 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="917c2d70-fb96-47a4-9e30-09dec2011818" Name="0. 控制" Enabled="true">
+          <Folder Id="9727cd19-90c8-48b5-84fc-f562c3e6048d" Name="0. 控制" Enabled="true">
             <Folders>
-              <Folder Id="118b39b9-f1c8-43c1-b83d-b42bb254f6d6" Name="标点" Enabled="true">
+              <Folder Id="b2e20973-7ce6-44da-94cf-3cb107d55766" Name="标点" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="标点保存" Id="e0b5a9fa-e481-4186-9279-1873667ee7ad" RegularExpression="^.{15}\S+ 1C:" PrevActions="Interrupt">
+                  <Trigger Enabled="true" Name="标点保存" Id="99d0bad9-7b9d-4ae9-97ff-9354957fbed6" RegularExpression="^.{15}\S+ 1C:" PrevActions="Interrupt">
                     <Actions>
                       <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="save" ActionType="NamedCallback" ExecutionDelayExpression="500">
                         <Condition Enabled="false" Grouping="Or" />
@@ -804,7 +798,7 @@
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="标点重载" Id="9686fd24-7e09-471a-af1c-b0b39a2ed48d" RegularExpression="^.{15}\S+ 104:1:1">
+                  <Trigger Enabled="true" Name="标点重载" Id="ed883861-1894-4d15-90f2-5149a48a1e1f" RegularExpression="^.{15}\S+ 104:1:1">
                     <Actions>
                       <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="load" ActionType="NamedCallback">
                         <Condition Enabled="false" Grouping="Or" />
@@ -820,7 +814,7 @@
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="初始化" Id="5730e0b7-eebc-4e8a-8f43-9877b5599142" RegularExpression="^.{15}\S+ 104:1:1">
+              <Trigger Enabled="true" Name="初始化" Id="e1f8f48a-00fc-4821-9a85-9b952846a02c" RegularExpression="^.{15}\S+ 104:1:1">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="UnsetRegexUniversal" VariableName="^Golbez_" ActionType="Variable">
                     <Condition Enabled="false" Grouping="And" />
@@ -829,9 +823,9 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="团灭重置" Id="f04844a7-c7f0-4c6a-9950-4d062d161da6" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
+              <Trigger Enabled="true" Name="团灭重置" Id="9724c242-4a19-4708-9b15-ff4a3b8911e6" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
                 <Actions>
-                  <Action OrderNumber="1" FolderOp="CancelFolder" FolderId="da8597d8-2a5d-4609-b890-70f3c31737a7" ActionType="Folder">
+                  <Action OrderNumber="1" FolderOp="CancelFolder" FolderId="38e27749-3916-45d8-8fee-cfbaf5068002" ActionType="Folder">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -959,10 +953,10 @@
                   <Action OrderNumber="34" LogMessageText="AdvWm_abs:A:100:86.25:0:1:B:92.5:${v:Golbez_Sphere_wm_y4}:0:1:C:100:113.75:0:1:D:95.5:${v:Golbez_Sphere_wm_y4}:0:1:One:98.5:${v:Golbez_Sphere_wm_y4}:0:1:Two:101.5:${v:Golbez_Sphere_wm_y4}:0:1:Three:104.5:${v:Golbez_Sphere_wm_y4}:0:1:Four:107.5:${v:Golbez_Sphere_wm_y4}:0:1" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="标点：#4" DescBgColor="dff" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="And" />
                   </Action>
-                  <Action OrderNumber="35" VariableOp="UnsetRegex" VariableName="^Golbez_Sphere" ActionType="Variable">
+                  <Action OrderNumber="35" VariableOp="UnsetRegex" VariableName="^Golbez_Sphere" Enabled="False" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="36" ListVariableName="Golbez_Sphere" ActionType="ListVariable">
+                  <Action OrderNumber="36" ListVariableName="Golbez_Sphere" Enabled="False" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="37" ActionType="Placeholder" ExecutionDelayExpression="4500" DescBgColor="ffd">
@@ -977,33 +971,36 @@
               </Trigger>
               <Trigger Enabled="true" Name="1. 检测实体" Id="0e31e124-0cf3-463f-9555-18d3bdf29ace" RegularExpression="^.{15}\S+ 105:Change:(?&lt;id&gt;4.{7}):Heading:[^:]+:PosX:(?&lt;x&gt;85\.0000|115\.0000|\d+[27]\.5000):PosY:(?&lt;y&gt;85\.0000|115\.0000|\d+[27]\.5000):">
                 <Actions>
-                  <Action OrderNumber="1" ActionType="Placeholder" Description="0x105 比 0x14 快两秒" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="2" ActionType="Placeholder" Description="一共 16 个实体，每边四个（两组），位于这条边的左中右三组可能位置" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="3" ActionType="Placeholder" Description="id 顺序决定施放顺序：id 最大的四个最快 " DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="4" ActionType="Placeholder" Description="temp_pos：每条边从左到右 / 上到下：1-6" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="5" ActionType="Placeholder" Description="字典记录内容：id: pos    如 40000001: 4 代表是这条边第四个位置有 id = 40000001 的球" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="6" DictVariableOp="Set" DictVariableValueType="Numeric" DictVariableName="Golbez_Sphere" DictVariableKey="${id}" DictVariableValue="(abs(${x}-100) != 15) ? (${x}-82.5)/5 : (${y}-82.5)/5" ActionType="DictVariable" Asynchronous="False">
+                  <Action OrderNumber="1" DictVariableValueType="Numeric" TriggerOp="CancelTrigger" TriggerId="eb27f741-c572-447a-9467-0fdffb4f04da" ActionType="Trigger" Asynchronous="False">
                     <Condition Enabled="false" Grouping="And" />
                   </Action>
-                  <Action OrderNumber="7" ActionType="Placeholder" Description="由于 0x105 偶尔会产生两条重复日志，即便第一次也不能计数触发，只能加一个延迟。" DescriptionOverride="True">
+                  <Action OrderNumber="2" ActionType="Placeholder" Description="0x105 比 0x14 快两秒" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" LogMessageText="Golbez_Sphere:getSafeSpots" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="500" Asynchronous="False">
+                  <Action OrderNumber="3" ActionType="Placeholder" Description="一共 16 个实体，每边四个（两组），位于这条边的左中右三组可能位置" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" ActionType="Placeholder" Description="id 顺序决定施放顺序：id 最大的四个最快 " DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" ActionType="Placeholder" Description="temp_pos：每条边从左到右 / 上到下：1-6" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" ActionType="Placeholder" Description="字典记录内容：id: pos    如 40000001: 4 代表是这条边第四个位置有 id = 40000001 的球" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" DictVariableOp="Set" DictVariableValueType="Numeric" DictVariableName="Golbez_Sphere" DictVariableKey="${id}" DictVariableValue="(abs(${x}-100) != 15) ? (${x}-82.5)/5 : (${y}-82.5)/5" ActionType="DictVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="And" />
+                  </Action>
+                  <Action OrderNumber="8" ActionType="Placeholder" Description="由于 0x105 偶尔会产生两条重复日志，即便第一次也不能计数触发，只能加一个延迟。" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" LogMessageText="Golbez_Sphere:getSafeSpots" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="500" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${d:Golbez_Sphere.size}" ExpressionTypeL="Numeric" ExpressionR="16" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="9" LogProcess="True" UseTTSTextExpression="自己看，缺数据" ActionType="UseTTS" Asynchronous="False">
+                  <Action OrderNumber="10" LogProcess="True" UseTTSTextExpression="自己看，缺数据" ActionType="UseTTS" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${d:Golbez_Sphere.size}" ExpressionTypeL="Numeric" ExpressionR="16" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                     </Condition>
@@ -1012,7 +1009,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="生成冰刺" Id="73e762f6-bb5e-4644-af3f-cb21cd26dcd4" RegularExpression="^.{15}\S+ 101:.{8}:00020001:0(?&lt;pos&gt;[0-3])" Description="冰刺：&#xD;&#xA;101:80034E7A:00020001:0[0-7]&#xD;&#xA;00 北 朝左&#xD;&#xA;01 北 朝右&#xD;&#xA;02 东 朝上&#xD;&#xA;03 东 朝下 &#xD;&#xA;04 南 朝左&#xD;&#xA;05 南 朝右&#xD;&#xA;06 西 朝上&#xD;&#xA;07 西 朝下">
+              <Trigger Enabled="true" Name="记录冰刺" Id="73e762f6-bb5e-4644-af3f-cb21cd26dcd4" RegularExpression="^.{15}\S+ 101:.{8}:00020001:0(?&lt;pos&gt;[0-3])" Description="冰刺：&#xD;&#xA;101:80034E7A:00020001:0[0-7]&#xD;&#xA;00 北 朝左&#xD;&#xA;01 北 朝右&#xD;&#xA;02 东 朝上&#xD;&#xA;03 东 朝下 &#xD;&#xA;04 南 朝左&#xD;&#xA;05 南 朝右&#xD;&#xA;06 西 朝上&#xD;&#xA;07 西 朝下">
                 <Actions>
                   <Action OrderNumber="1" ActionType="Placeholder" Description="上←00  上→01  右↑02  右↓03  下←04  下→05  左↑06  左↓07   由于风球相关的必定反向，只用前四个判断。" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1027,100 +1024,49 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="Debug Log" Id="b2cc35b9-65db-4821-8166-3229b3520cd9" RegularExpression="">
+              <Trigger Enabled="true" Name="1'. 实体无变化" Id="eb27f741-c572-447a-9467-0fdffb4f04da" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:844D:">
                 <Actions>
-                  <Action OrderNumber="1" LogMessageText="[00:46:46.904] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="2" LogMessageText="[00:47:56.032] 261 105:Change:40002DE9:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.2 * 1000">
+                  <Action OrderNumber="1" ActionType="Placeholder" Asynchronous="False" Description="当两次风球位置完全没变化时（1/32 概率），不会有移动日志，改成用阶段开始之后延迟触发。" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" LogMessageText="[00:47:56.032] 261 105:Change:40002DEA:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="4" LogMessageText="[00:47:56.032] 261 105:Change:40002DE8:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="5" LogMessageText="[00:47:56.032] 261 105:Change:40002DE7:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="6" LogMessageText="[00:47:56.032] 261 105:Change:40002DE5:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="7" LogMessageText="[00:47:56.032] 261 105:Change:40002DE6:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="8" LogMessageText="[00:47:56.032] 261 105:Change:40002DE4:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="9" LogMessageText="[00:47:56.032] 261 105:Change:40002DE3:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="10" LogMessageText="[00:47:56.032] 261 105:Change:40002DF2:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="11" LogMessageText="[00:47:56.032] 261 105:Change:40002DEE:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="12" LogMessageText="[00:47:56.032] 261 105:Change:40002DEF:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="13" LogMessageText="[00:47:56.032] 261 105:Change:40002DEB:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="14" LogMessageText="[00:47:56.032] 261 105:Change:40002DEC:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="15" LogMessageText="[00:47:56.032] 261 105:Change:40002DF0:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="16" LogMessageText="[00:47:56.032] 261 105:Change:40002DF1:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="17" LogMessageText="[00:47:56.032] 261 105:Change:40002DED:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="18" LogMessageText="[00:48:01.433] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.4 * 1000" />
-                  <Action OrderNumber="19" LogMessageText="[00:52:42.398] 261 105:Change:40002DF0:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="20 * 1000">
-                    <Condition Enabled="false" Grouping="Or" />
+                  <Action OrderNumber="2" LogMessageText="Golbez_Sphere:getSafeSpots" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="11200">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${d:Golbez_Sphere.size}" ExpressionTypeL="Numeric" ExpressionR="16" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
                   </Action>
-                  <Action OrderNumber="20" LogMessageText="[00:52:42.398] 261 105:Change:40002DEF:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="21" LogMessageText="[00:52:42.398] 261 105:Change:40002DEB:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="22" LogMessageText="[00:52:42.398] 261 105:Change:40002DEE:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="23" LogMessageText="[00:52:42.398] 261 105:Change:40002DED:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="24" LogMessageText="[00:52:42.398] 261 105:Change:40002DEC:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="25" LogMessageText="[00:52:42.398] 261 105:Change:40002DF2:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="26" LogMessageText="[00:52:42.398] 261 105:Change:40002DF1:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="27" LogMessageText="[00:52:47.907] 257 101:80034E7A:00020001:00:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.5 * 1000" />
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="Debug Log" Id="b2b4e6a0-5752-48b1-92c5-abc9e9c212e6" RegularExpression="">
+              <Trigger Enabled="false" Name="Debug Log" Id="e62390e4-ffc7-4f55-be91-07242e6f982b" RegularExpression="">
                 <Actions>
-                  <Action OrderNumber="1" LogMessageText="[00:07:26.635] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="2" LogMessageText="[00:08:35.551] 261 105:Change:40016E54:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.5 * 1000">
+                  <Action OrderNumber="1" LogMessageText="[07:27:56.778] 260 104:1:1" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="2" LogMessageText="[07:28:55.267] StartsCasting 14:4001732D:高贝扎:844D:风晶球:4001732D:高贝扎:2.700:99.99:99.99:0.03:-3.06" LogProcess="True" Enabled="False" ActionType="LogMessage" ExecutionDelayExpression="0.5 * 1000">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" LogMessageText="[00:08:35.551] 261 105:Change:40016E58:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="4" LogMessageText="[00:08:35.551] 261 105:Change:40016E56:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="5" LogMessageText="[00:08:35.551] 261 105:Change:40016E59:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="6" LogMessageText="[00:08:35.551] 261 105:Change:40016E53:Heading:-3.1416:PosX:107.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="7" LogMessageText="[00:08:35.551] 261 105:Change:40016E57:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="8" LogMessageText="[00:08:35.551] 261 105:Change:40016E52:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="9" LogMessageText="[00:08:35.551] 261 105:Change:40016E51:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="10" LogMessageText="[00:08:35.551] 261 105:Change:40016E55:Heading:-3.1416:PosX:112.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="11" LogMessageText="[00:08:35.551] 261 105:Change:40016E50:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="12" LogMessageText="[00:08:35.551] 261 105:Change:40016E4D:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="13" LogMessageText="[00:08:35.551] 261 105:Change:40016E4E:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="14" LogMessageText="[00:08:35.551] 261 105:Change:40016E4F:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="15" LogMessageText="[00:08:35.551] 261 105:Change:40016E4F:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="16" LogMessageText="[00:08:35.551] 261 105:Change:40016E4C:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="17" LogMessageText="[00:08:35.551] 261 105:Change:40016E4A:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="18" LogMessageText="[00:08:35.551] 261 105:Change:40016E4B:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="19" LogMessageText="[00:08:41.085] 257 101:80034E7A:00020001:03:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.5 * 1000" />
-                  <Action OrderNumber="20" LogMessageText="[00:13:21.942] 261 105:Change:40016E59:Heading:-3.1416:PosX:112.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="20 * 1000">
+                  <Action OrderNumber="3" LogMessageText="[07:29:05.344] 261 105:Change:4001731B:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="10.1 * 1000" />
+                  <Action OrderNumber="4" LogMessageText="[07:29:05.344] 261 105:Change:40017323:Heading:-3.1416:PosX:112.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="5" LogMessageText="[07:29:05.344] 261 105:Change:40017322:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="6" LogMessageText="[07:29:05.344] 261 105:Change:40017325:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="7" LogMessageText="[07:29:05.344] 261 105:Change:40017320:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="8" LogMessageText="[07:29:05.344] 261 105:Change:40017327:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="9" LogMessageText="[07:29:05.344] 261 105:Change:40017319:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="10" LogMessageText="[07:29:05.344] 261 105:Change:40017324:Heading:0.0000:PosX:102.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="11" LogMessageText="[07:29:05.344] 261 105:Change:40017321:Heading:-3.1416:PosX:107.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="12" LogMessageText="[07:29:05.344] 261 105:Change:40017318:Heading:1.5704:PosX:85.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="13" LogMessageText="[07:29:05.344] 261 105:Change:4001731A:Heading:1.5704:PosX:85.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="14" LogMessageText="[07:29:05.344] 261 105:Change:40017326:Heading:0.0000:PosX:97.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="15" LogMessageText="[07:29:05.445] 261 105:Change:4001731E:Heading:-1.5705:PosX:115.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.1 * 1000" />
+                  <Action OrderNumber="16" LogMessageText="[07:29:05.445] 261 105:Change:4001731C:Heading:-1.5705:PosX:115.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="17" LogMessageText="[07:29:05.445] 261 105:Change:4001731D:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="18" LogMessageText="[07:29:05.445] 261 105:Change:4001731F:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                  <Action OrderNumber="19" LogMessageText="[07:33:57.498] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.7 * 1000">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="21" LogMessageText="[00:13:21.942] 261 105:Change:40016E58:Heading:-3.1416:PosX:102.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="22" LogMessageText="[00:13:21.942] 261 105:Change:40016E57:Heading:-3.1416:PosX:107.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="23" LogMessageText="[00:13:21.942] 261 105:Change:40016E54:Heading:0.0000:PosX:107.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="24" LogMessageText="[00:13:21.942] 261 105:Change:40016E56:Heading:-3.1416:PosX:97.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="25" LogMessageText="[00:13:21.942] 261 105:Change:40016E55:Heading:0.0000:PosX:87.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="26" LogMessageText="[00:13:21.942] 261 105:Change:40016E53:Heading:0.0000:PosX:92.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="27" LogMessageText="[00:13:21.942] 261 105:Change:40016E52:Heading:0.0000:PosX:112.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="28" LogMessageText="[00:13:21.942] 261 105:Change:40016E51:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="29" LogMessageText="[00:13:21.942] 261 105:Change:40016E50:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="30" LogMessageText="[00:13:21.942] 261 105:Change:40016E4F:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="31" LogMessageText="[00:13:21.942] 261 105:Change:40016E4E:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="32" LogMessageText="[00:13:21.942] 261 105:Change:40016E4D:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="33" LogMessageText="[00:13:21.942] 261 105:Change:40016E4C:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="34" LogMessageText="[00:13:21.942] 261 105:Change:40016E4B:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="35" LogMessageText="[00:13:21.942] 261 105:Change:40016E4A:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="36" LogMessageText="[00:13:27.494] 257 101:80034E7A:00020001:03:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.6 * 1000" />
-                  <Action OrderNumber="37" LogMessageText="[00:16:05.555] 261 105:Change:40016E58:Heading:-3.1416:PosX:92.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="20 * 1000">
+                  <Action OrderNumber="20" LogMessageText="[07:33:41.765] StartsCasting 14:4001732D:高贝扎:844D:风晶球:4001732D:高贝扎:2.700:99.99:99.99:0.03:3.13" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="38" LogMessageText="[00:16:05.555] 261 105:Change:40016E56:Heading:-3.1416:PosX:87.5000:PosY:115.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="39" LogMessageText="[00:16:05.555] 261 105:Change:40016E55:Heading:0.0000:PosX:97.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="40" LogMessageText="[00:16:05.555] 261 105:Change:40016E53:Heading:0.0000:PosX:102.5000:PosY:85.0000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="41" LogMessageText="[00:16:05.555] 261 105:Change:40016E51:Heading:-1.5705:PosX:115.0000:PosY:87.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="42" LogMessageText="[00:16:05.555] 261 105:Change:40016E50:Heading:-1.5705:PosX:115.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="43" LogMessageText="[00:16:05.555] 261 105:Change:40016E4F:Heading:-1.5705:PosX:115.0000:PosY:92.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="44" LogMessageText="[00:16:05.555] 261 105:Change:40016E4E:Heading:-1.5705:PosX:115.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="45" LogMessageText="[00:16:05.555] 261 105:Change:40016E4D:Heading:1.5704:PosX:85.0000:PosY:112.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="46" LogMessageText="[00:16:05.555] 261 105:Change:40016E4C:Heading:1.5704:PosX:85.0000:PosY:102.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="47" LogMessageText="[00:16:05.555] 261 105:Change:40016E4B:Heading:1.5704:PosX:85.0000:PosY:107.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="48" LogMessageText="[00:16:05.555] 261 105:Change:40016E4A:Heading:1.5704:PosX:85.0000:PosY:97.5000:PosZ:0.0300" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
-                  <Action OrderNumber="49" LogMessageText="[00:16:11.248] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.7 * 1000" />
+                  <Action OrderNumber="21" LogMessageText="[07:33:57.498] 257 101:80034E7A:00020001:02:00:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="15.7 * 1000" />
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
@@ -1129,7 +1075,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="false" Source="None" Name="精准初始场地标点（右键执行）  执行后为本地可见，存入游戏预设并载入后全队可见" Id="b2540bef-b530-437e-adc1-217ee5220cf7" RegularExpression="">
+          <Trigger Enabled="false" Source="None" Name="精准初始场地标点（右键执行）" Id="0a2fcbb0-7098-4f71-8a87-a7763e5bb334" RegularExpression="">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="place" NamedCallbackParam="{&#xD;&#xA;  &quot;A&quot;:{&quot;X&quot;:100, &quot;Y&quot;:0, &quot;Z&quot;:87, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;B&quot;:{&quot;X&quot;:113, &quot;Y&quot;:0, &quot;Z&quot;:100, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;C&quot;:{&quot;X&quot;:100, &quot;Y&quot;:0, &quot;Z&quot;:113, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;D&quot;:{&quot;X&quot;:87, &quot;Y&quot;:0, &quot;Z&quot;:100, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;One&quot;:{&quot;X&quot;:103.9, &quot;Y&quot;:0, &quot;Z&quot;:96.1, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;Two&quot;:{&quot;X&quot;:103.9, &quot;Y&quot;:0, &quot;Z&quot;:103.9, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;Three&quot;:{&quot;X&quot;:96.1, &quot;Y&quot;:0, &quot;Z&quot;:103.9, &quot;Active&quot;:1}, &#xD;&#xA;  &quot;Four&quot;:{&quot;X&quot;:96.1, &quot;Y&quot;:0, &quot;Z&quot;:96.1, &quot;Active&quot;:1}&#xD;&#xA;}" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1138,7 +1084,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="false" Source="None" Name="使用须知" Id="63940f9d-b593-41d6-93de-b97231ac8c33" RegularExpression="^.{15}\S+ ？">
+          <Trigger Enabled="false" Source="None" Name="使用须知" Id="b2eca77f-0cde-497f-bb53-67a454a247c9" RegularExpression="^.{15}\S+ ？">
             <Actions>
               <Action OrderNumber="1" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1158,19 +1104,40 @@
               <Action OrderNumber="6" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" ActionType="Placeholder" Description="团灭前如果标点改了，团灭后不会立刻恢复，属于正常现象，开怪就恢复了。" DescriptionOverride="True">
+              <Action OrderNumber="7" ActionType="Placeholder" Description="初始场地标点的触发器右键执行。  执行后为本地可见，存入游戏预设并载入后全队可见。" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+              <Action OrderNumber="8" ActionType="Placeholder" Description="右键没有执行的去触发器右上角配置里开启开发者模式。" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" ActionType="Placeholder" Description="by 阿洛 MnFeN" DescriptionOverride="True">
+              <Action OrderNumber="9" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" ActionType="Placeholder" Description="有问题加群：556836295" DescriptionOverride="True">
+              <Action OrderNumber="10" ActionType="Placeholder" Description="团灭前如果标点改了，团灭后不会立刻恢复，属于正常现象，开怪就恢复了。" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="11" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ActionType="Placeholder" Description="by 阿洛 MnFeN" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ActionType="Placeholder" Description="有问题加群：556836295 群公告里有教程" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" ActionType="Placeholder" DescBgColor="fff" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" ActionType="Placeholder" Description="更新记录：" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" ActionType="Placeholder" Description="· 2.2：修复四风的风球刷新与上一次完全一致时（1/32 概率）没有日志导致没有播报的问题。" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" ActionType="Placeholder" Description="· 2.1：重构四风的写法；修复四风偶尔产生重复日志导致第一次无法播报的问题；添加陨石近战点标记&#xD;&#xA;" DescriptionOverride="True">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" ActionType="Placeholder" Description="· 2.0：升级触发器版本；引入高级标点工具箱，添加标点指路" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>

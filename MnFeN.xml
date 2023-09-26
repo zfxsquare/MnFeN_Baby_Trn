@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="97a888cf-b6a8-481e-9bcb-858f7f9c4a05" Name="阿洛宝宝椅" Enabled="true">
+  <ExportedFolder Id="97a888cf-b6a8-481e-9bcb-858f7f9c4a05" Name="阿洛宝宝椅(请复制一份到本地修改同时关闭远程触发器)" Enabled="true">
     <Folders>
       <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1141$" Id="38e27749-3916-45d8-8fee-cfbaf5068002" ZoneFilterRegularExpression="by MnFeN" Name="极高贝扎宝宝椅 v2.2 by MnFeN" Enabled="true">
         <Folders>
@@ -873,7 +873,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="32f02b2b-f7f9-4b45-a738-60c9fb9a16d0" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8280:" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
@@ -890,7 +889,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 本体钢铁月环" Id="ce7dac58-aa21-4098-a4c9-b068199b5891" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82A(?&lt;type&gt;[67]):">
                     <Actions>
@@ -899,7 +897,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="a66abcfc-b91d-4761-a727-f99e9061bbf0" RegularExpression="">
                     <Actions>
@@ -913,7 +910,6 @@
                       <Action OrderNumber="8" LogMessageText="[21:28:25.801] StartsCasting 14:400447DB:Pandæmonium:8285:Imprisonment:400447DB:Pandæmonium:3.200:108.00:102.00:0.00:-1.57" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.1 记录柱子钢铁月环" Id="ad7a7e5c-7541-4dc4-8eab-c1959e59d75b" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:(?&lt;SID&gt;828[57]):[^:]+:.{8}:[^:]+:[^:]+:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):">
                     <Actions>
@@ -941,7 +937,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -957,7 +952,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="1a5e3303-e134-4294-8869-364162703b53" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:87AF:">
                     <Actions>
@@ -969,7 +963,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 记录麻将" Id="9b18021c-606c-4f40-b37c-e6289033aa8b" RegularExpression="^P10s_1B:(?&lt;id&gt;4.{7}):[^:]+:(?&lt;type&gt;-13[10]|-12[98])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -1007,7 +1000,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="729cd469-bf86-4048-8e89-059aabab9250" RegularExpression="">
                     <Actions>
@@ -1025,7 +1017,6 @@
                       <Action OrderNumber="10" LogMessageText="[20:42:09.620] TargetIcon 1B:4004177E:Pandæmoniac Pillar:0000:0000:017A:0000:0000:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="准备站位" Id="c908a09f-b883-4992-82b8-699bc929d1ee" RegularExpression="^.{15}\S+ 1A:DDE:[^:]+:(38|41)\.00:" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="2000">
                     <Actions>
@@ -1034,7 +1025,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 处理数据" Id="4de4fb77-93c1-428a-b344-1d098cfbedea" RegularExpression="^P10s_Turret:process" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -1139,7 +1129,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1267,7 +1256,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_stack}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 第二次  1/2 （四连激光击退）" Id="f42984f8-f7d5-44a9-85c4-1b49090e54ad" RegularExpression="^.{15}\S+ 1A:(?&lt;SID&gt;DDF):[^:]+:(?&lt;t&gt;(38|41)\.00):.{8}::.{8}:(?&lt;PN&gt;[^:]+):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                     <Actions>
@@ -1336,7 +1324,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_stack}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4. 第四次  1/2/4 （击退后）" Id="e4beb719-a91b-419c-b179-8c2028b2bef2" RegularExpression="^.{15}\S+ 1A:(?&lt;SID&gt;DDF|E70):[^:]+:(?&lt;t&gt;3[25]\.00):.{8}::.{8}:(?&lt;PN&gt;[^:]+):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                     <Actions>
@@ -1486,7 +1473,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_stack}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3. 第三次  1/4 （半场+激光间隙）" Id="27ff344c-e69d-4e36-9953-cecfd49798ac" RegularExpression="^.{15}\S+ 1A:(?&lt;SID&gt;E70):[^:]+:(?&lt;t&gt;2[15]\.00):.{8}::.{8}:(?&lt;PN&gt;[^:]+):" PeriodRefire="Deny" RefirePeriodExpression="5000">
                     <Actions>
@@ -1536,7 +1522,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_stack}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.2 激光炮间隙" Id="c448da6e-69e9-45b5-b28e-3e8fb720f390" RegularExpression="^.{15}\S+ 03:4.{7}:[^:]+:00:5A:0000:00::12356:16162:[^:]*:[^:]*:[^:]*:[^:]*:::[^:]*:(?&lt;y&gt;98.00|100.00):">
                     <Actions>
@@ -1567,7 +1552,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_stack}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.1 半场激光" Id="ce7173f7-6998-4182-9fbb-45c62c1e3411" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:(?&lt;SID&gt;828[B9]):">
                     <Actions>
@@ -1601,7 +1585,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_stack}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log 2" Id="fcbe2392-b52c-4d94-a558-d251ab99ff2e" RegularExpression="">
                     <Actions>
@@ -1623,7 +1606,6 @@
                       <Action OrderNumber="8" LogMessageText="[04:38:55.773] StatusAdd 1A:DDF:_rsv_3551_-1_1_0_0_S74CFC3B0_E74CFC3B0:41.00:E0000000::1076C8BE:Astrum Solaris:00:81598:" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log 1" Id="96b186e2-b962-4b25-a4be-e0d5bb9ec359" RegularExpression="">
                     <Actions>
@@ -1640,7 +1622,6 @@
                       <Action OrderNumber="7" LogMessageText="[04:37:53.800] StatusAdd 1A:DDF:_rsv_3551_-1_1_0_0_S74CFC3B0_E74CFC3B0:22.00:E0000000::106F6B3B:Damien Omega:00:73863:" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log 3" Id="9cb0a03f-f1a9-4c52-b493-4ff9e9783abc" RegularExpression="">
                     <Actions>
@@ -1671,7 +1652,6 @@
                       <Action OrderNumber="9" LogMessageText="[04:41:20.458] AddCombatant 03:40000632:Arcane Sphere:00:5A:0000:00::12356:16162:6920000:6920000:10000:10000:::106.50:98.00:0.00:-1.57" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="5.1 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log 4" Id="826717d4-d847-4a7b-9c56-0514e6901ee9" RegularExpression="">
                     <Actions>
@@ -1697,7 +1677,6 @@
                       <Action OrderNumber="8" LogMessageText="[04:42:56.742] StatusAdd 1A:E70:_rsv_3696_-1_1_0_0_S74CFC3B0_E74CFC3B0:35.00:E0000000::10940FBB:Jericho Dracht:00:74397:" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="分散分摊读条计数" Id="034031c9-a5ed-4dc3-af11-cd21e9eaa15c" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82A1:">
                     <Actions>
@@ -1706,7 +1685,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1734,7 +1712,6 @@
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_wings}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="2. 织网点名（普通搭桥）" Id="2c0b4ad7-8c71-4cf5-bc38-ac9f43dc5bc4" RegularExpression="^P10s_1B:1.{7}:(?&lt;TN&gt;[^:]+):(?&lt;type&gt;-37)$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -1746,7 +1723,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_wings}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="3. 数据处理" Id="9c1b3964-8b52-4e7c-b12a-1d05dcaba9bd" RegularExpression="^P10s_Wings_Stack:recorded">
                         <Actions>
@@ -1787,7 +1763,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_wings}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${l:P10s_Wings_Tether.contain(${_me})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1813,7 +1788,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 分摊/织网点名" Id="db5782a7-8d8c-4466-8e2d-0daea3760055" RegularExpression="^P10s_1B:1.{7}:(?&lt;TN&gt;[^:]+):(?&lt;type&gt;-39|-37)$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -1848,7 +1822,6 @@
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_wings}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="2. 数据处理（自己是织网组）" Id="206ed9c7-5e99-4093-95ce-7a78b9c279ce" RegularExpression="^P10s_Wings3:recorded">
                         <Actions>
@@ -1875,7 +1848,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${var:P10s_phase_wings}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${l:P10s_Wings_Web.contain(${_me})}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="2. 数据处理（自己是分摊组）" Id="d222330a-b539-442c-bb69-729cbdbe56af" RegularExpression="^P10s_Wings3:recorded">
                         <Actions>
@@ -1911,7 +1883,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${l:P10s_Wings_Tether.contain(${_me})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${l:P10s_Wings_Web.contain(${_me})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1951,7 +1922,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${v:P10s_phase_wings}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="撞线提示" Id="2299e122-3329-4fc3-ace3-aeac9c2cf443" RegularExpression="^.{15}\S+ 1[56]:4.{7}:[^:]+:8298:[^:]+:.{8}:(?&lt;TN&gt;[^:]+):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="2000">
                     <Actions>
@@ -1962,7 +1932,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Sequential="True" Name="0. 初始化 + 计数 + 取消标点" Id="d6707203-d804-43d5-a1c4-0e5eff9f3082" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8297:">
                     <Actions>
@@ -1992,7 +1961,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.1 记录光剑连线" Id="004bf006-2f62-4fef-b713-eb8d8a342ac3" RegularExpression="^.{15}\S+ 23:(?&lt;sid&gt;4.{7}):[^:]+:1.{7}:(?&lt;TN&gt;[^:]+):0000:0000:00F2:">
                     <Actions>
@@ -2012,7 +1980,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Source="None" Name="Debug Log" Id="5026872e-a4ac-4d46-b5b9-a7915f36c93d" RegularExpression="^.{15}\S+ 1[56]:4.{7}:[^:]+:8298:[^:]+:.{8}:(?&lt;TN&gt;[^:]+):|^.{15}\S+ 23:(?&lt;sid&gt;4.{7}):[^:]+:1.{7}:(?&lt;TN&gt;[^:]+):0000:0000:00F2:|^.{15}\S+ 14:4.{7}:[^:]+:8297:|^.{15}\S+ 1[56]:4.{7}:[^:]+:8298:.+:125.00:92.50:0.00:[^:]+:.{8}:0:\d+$|^.{15}\S+ 1B|^.{15}\S+ 104">
                     <Actions>
@@ -2073,7 +2040,6 @@
                       <Action OrderNumber="33" LogMessageText="[08:39:34.803] TargetIcon 1B:1084F264:G'raha Tia:0000:0000:02A7:0000:0000:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2091,7 +2057,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="标点重载" Id="7f15d203-a987-4c1b-ab0c-c9b1534882b0" RegularExpression="^.{15}\S+ 21:.{8}:40000006">
                         <Actions>
@@ -2107,7 +2072,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -2120,7 +2084,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="TargetIcon 相对值" Id="fb4ebd0f-d34f-4d82-be89-36da9178dfde" RegularExpression="^.{15}\S+ 1B:(?&lt;PID&gt;.{8}):(?&lt;PN&gt;[^:]*):.{9}:(?&lt;type&gt;.{4}):">
                     <Actions>
@@ -2134,7 +2097,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="存储无序队员列表" Id="d8915350-bac5-4260-ae73-e0f64440661c" RegularExpression="^.{15}\S+ 16:4.{7}:[^:]+:82A5:[^:]+:1.{7}:(?&lt;tn&gt;[^:]+):.+:8$">
                     <Actions>
@@ -2145,7 +2107,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${l:P10s_plist.size}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="团灭中断动作" Id="1f9ce12f-1475-4186-aec3-2e575cf4d147" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
                     <Actions>
@@ -2154,7 +2115,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2176,7 +2136,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="大激光分摊" Id="fe47d45d-4ca9-4912-a7f8-c773ee3f00fa" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:829D:">
                     <Actions>
@@ -2187,7 +2146,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2208,7 +2166,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="尖脚 死刑踩塔 " Id="67daf5af-6b64-4947-9bac-f4e0747dcf16" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8299:">
                     <Actions>
@@ -2235,7 +2192,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="究极 流血AoE " Id="70f25d9e-2857-4c8b-b601-f2cadb19916a" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:82A5:">
                     <Actions>
@@ -2244,7 +2200,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="万魔殿之柱 踩塔" Id="35aea214-b553-4dc8-9365-aca3ebab94a9" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8280:">
                     <Actions>
@@ -2253,7 +2208,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="空降 Touchdown 大黑圈 " Id="20c5c67c-f99e-4420-9cf7-1855ed6cc11b" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:828D:">
                     <Actions>
@@ -2262,7 +2216,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="激光炮" Id="b48b2a0a-d3b7-455a-8774-3951b2e92673" RegularExpression="^.{15}\S+ 03:4.{7}:[^:]+:00:5A:0000:00::12356:16162:[^:]*:[^:]*:[^:]*:[^:]*:::(?&lt;x&gt;[^:]+):(?&lt;y&gt;98.00|100.00):">
                     <Actions>
@@ -2301,7 +2254,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="万魔殿射线 左右刀" Id="31cc5b73-a477-4d86-8088-04e272ed7f97" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:(?&lt;SID&gt;828[B9]):">
                     <Actions>
@@ -2317,7 +2269,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="魔殿震击 砸地板" Id="99c896a1-2a08-4114-8eb4-ef64e5393873" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:828F:">
                     <Actions>
@@ -2329,7 +2280,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="喷吐丝网 Silkspit 准备放圈" Id="4ce18650-9a27-4413-af8a-63973ca10a62" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:827C:">
                     <Actions>
@@ -2338,7 +2288,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="万魔殿之环/神圣 本体钢铁月环" Id="098dd0dc-a484-4d9d-bb3b-255845e9f6e1" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82A(?&lt;type&gt;[67]):">
                     <Actions>
@@ -2389,7 +2338,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2420,7 +2368,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 预记录第一个扇形 ID" Id="4e2ae79c-f0c3-470b-8e1c-393ca66d6be2" RegularExpression="^.{15}\S+ 14:(?&lt;id&gt;4.{7}):[^:]*:829A:">
                     <Actions>
@@ -2449,7 +2396,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${ev:P10s_Plume_id1}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化（关）" Id="bc446bc3-2be9-4294-9ace-84d3a4276f54" RegularExpression="^.{15}\S+ 104:">
                     <Actions>
@@ -2461,7 +2407,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="2.1 第一组扇形" Id="954c1835-b0e2-4c15-99ab-953631190443" RegularExpression="^.{15}\S+ 105:Change:(?&lt;id&gt;4.{7}):Heading:(?&lt;h&gt;[^:]+):PosX:100\.00[^:]*:PosY:100\.00[^:]*:PosZ:0\.00[^:]*" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="10000">
                     <Actions>
@@ -2489,7 +2434,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="${v:P10s_Plume_id1}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="${v:P10s_Plume_id2}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="2.2 第二组扇形" Id="c1cb9353-5884-4133-b4e7-c1141645e713" RegularExpression="^.{15}\S+ 105:Change:(?&lt;id&gt;4.{7}):Heading:(?&lt;h&gt;[^:]+):PosX:100\.00[^:]*:PosY:100\.00[^:]*:PosZ:0\.00[^:]*" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="10000">
                     <Actions>
@@ -2523,7 +2467,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="${v:P10s_Plume_id3}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="${v:P10s_Plume_id4}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Source="None" Name="Debug Log" Id="c1e4dab0-9e72-4f56-906c-59a8029a3585" RegularExpression="^.{15}\S+ 105:Change:(?&lt;id&gt;4.{7}):Heading:(?&lt;h&gt;[^:]+):PosX:100\.00[^:]*:PosY:100\.00[^:]*:PosZ:0\.00[^:]*|^.{15}\S+ 14:(?&lt;id&gt;4.{7}):[^:]*:829A:|^.{15}\S+ 14:4.{7}:[^:]+:8295:|^.{15}\S+ 104:">
                     <Actions>
@@ -2562,7 +2505,6 @@
                       <Action OrderNumber="23" LogMessageText="[03:15:26.321] 261 105:Change:40016EA3:Heading:-1.1345:PosX:100.0000:PosY:100.0000:PosZ:0.0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log 2" Id="c7bab6de-3696-4c75-8000-abd1b3c23891" RegularExpression="">
                     <Actions>
@@ -2601,7 +2543,6 @@
                       <Action OrderNumber="21" LogMessageText="[08:41:45.132] 261 105:Change:4000A77C:Heading:-0.3491:PosX:100.0000:PosY:100.0000:PosZ:0.0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2627,7 +2568,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="流血 AoE Eunomia " Id="2cacfd64-086d-4423-b0ad-579305e8f25c" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:822B:">
                     <Actions>
@@ -2636,7 +2576,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="多段分摊 Styx" Id="2d1e797d-bdc7-42bb-91d6-e3a3e6ef193c" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8217:">
                     <Actions>
@@ -2648,7 +2587,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="转盘 Dark Current" Id="f445ea5c-23a3-448d-9ba5-453ba600e3b9" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8204:">
                     <Actions>
@@ -2660,12 +2598,10 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Source="None" Name="data" Id="d87cd6c4-46d5-4fc0-838b-98859e8dc598" RegularExpression="" Description="boss 半径：11 m&#xD;&#xA;场地正方形：10 m&#xD;&#xA;内圈小正方形花纹：7 m&#xD;&#xA;外圈小正方形：13 m&#xD;&#xA;&#xD;&#xA;本体光钢铁/直线 13 (半径/半宽)&#xD;&#xA;本体暗月环/直线 8">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2687,7 +2623,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="八方 - 暗" Id="6dee69a5-d306-4d91-b376-1064135d6c0e" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:81E7:">
                     <Actions>
@@ -2704,7 +2639,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="直线 - 光" Id="61db8112-c3a8-411e-bde8-ca8dded4e808" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:81EC:">
                     <Actions>
@@ -2731,7 +2665,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="直线 - 暗" Id="a2c8f64a-6b0f-47e8-9f69-10851d561871" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:81ED:">
                     <Actions>
@@ -2769,7 +2702,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="连线 - 暗" Id="90bcf924-cfec-489a-b3b9-85008d1b3562" RegularExpression="^.{15}\S+ 14:(?&lt;CID&gt;4.{7}):[^:]+:87D4:">
                     <Actions>
@@ -2813,7 +2745,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="连线 - 光" Id="a20071f2-afe7-43d4-a30a-c7c07639a161" RegularExpression="^.{15}\S+ 14:(?&lt;CID&gt;4.{7}):[^:]+:87D3:">
                     <Actions>
@@ -2857,7 +2788,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name=".记录光暗连线目标" Id="a93169c8-a360-4d2e-8be6-e9af7b62dcf2" RegularExpression="^.{15}\S+ 23:(?&lt;CID&gt;4.{7}):[^:]*:1.{7}:(?&lt;TN&gt;[^:]+):[^:]*:[^:]*:00F9:">
                     <Actions>
@@ -2869,7 +2799,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2906,7 +2835,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 处理结果" Id="f7c7740a-d52c-46b1-ad30-f88c907ceea2" RegularExpression="^P11s_Laser" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -2932,7 +2860,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="8ef4c617-3067-4674-8cc1-afa3fd960590" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8203:" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -2941,7 +2868,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2978,7 +2904,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:P11s_D&amp;L_tether_${PN1}}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="激活暗" Id="c411747c-030c-4565-a5ec-5e17a02c4f4f" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8210:">
                     <Actions>
@@ -2987,7 +2912,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="激活光" Id="2c3eddf7-9217-4a6c-9460-720fbae41252" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:820F:">
                     <Actions>
@@ -2996,7 +2920,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 开始" Id="d2e905a6-3b59-46ba-aa70-cdf1341c99ae" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:81FE:">
                     <Actions>
@@ -3008,7 +2931,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 记录buff" Id="dcc67652-2d1c-4b2c-9a4e-2a8bfff902e4" RegularExpression="^.{15}\S+ 1A:DE(?&lt;type&gt;[1-4]):[^:]+:[^:]+:E0000000::.{8}:(?&lt;TN&gt;[^:]+):">
                     <Actions>
@@ -3034,7 +2956,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:P11s_D&amp;L_buff_${TN}}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3. 播报" Id="f5570c02-c407-4b21-810d-646d49863b15" RegularExpression="^P11s_D&amp;L:initialized$">
                     <Actions>
@@ -3117,7 +3038,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="八方 - 暗" Id="df81d358-0fe4-48e0-80f4-2ac69a530cb2" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:81E7:">
                     <Actions>
@@ -3144,7 +3064,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="八方 - 光" Id="99a1104e-acc0-4c63-bcef-aef8582e2471" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:81E6:">
                     <Actions>
@@ -3168,7 +3087,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="直线 - 暗" Id="e38ed5f3-1cf6-4278-a9e5-2a6ccaa1dd8c" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:81ED:">
                     <Actions>
@@ -3234,7 +3152,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="直线 - 光" Id="da414fd0-478c-463c-8a90-4adfb97ce8ad" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:81EC:">
                     <Actions>
@@ -3265,7 +3182,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="DarkAndLight" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4. 终审 Emissary's Will" Id="5154faf4-0b92-4b4c-b70a-2d9caf7db01b" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8202:">
                     <Actions>
@@ -3279,7 +3195,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3293,7 +3208,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="本体直线 - 暗" Id="eb31ccd3-4bfb-4ca6-bdf6-d188da0c539a" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:87B4:">
                     <Actions>
@@ -3313,7 +3227,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="本体直线 - 光" Id="ee8a8462-2429-4d9d-a6c3-f0f65b15c568" RegularExpression="^.{15}\S+ 14:(?&lt;sid&gt;4.{7}):[^:]+:87B3:">
                     <Actions>
@@ -3333,7 +3246,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="幻影暗线" Id="08dd33ea-4012-4a70-bdfd-281315bc5f7f" RegularExpression="^.{15}\S+ 14:(?&lt;CID&gt;4.{7}):[^:]+:87D1:">
                     <Actions>
@@ -3389,7 +3301,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="ShadowedMessengers" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="分身安全方向" Id="54e5bafa-be34-4761-8b21-fbfc01f92119" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:821E:.+:(?&lt;d&gt;[^:]+)$">
                     <Actions>
@@ -3417,7 +3328,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="ShadowedMessengers" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3437,7 +3347,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 开始" Id="c11896dc-2772-4438-bc49-ce7e525d2214" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:87D2:">
                     <Actions>
@@ -3446,7 +3355,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="幻影暗线" Id="6e5a2109-7b58-4a5b-bfc4-0f2f0abbd9e2" RegularExpression="^.{15}\S+ 14:(?&lt;CID&gt;4.{7}):[^:]+:87D1:">
                     <Actions>
@@ -3509,7 +3417,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="LetterOfTheLaw" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="击退 - 暗" Id="796a11a0-5160-4b2e-8d2a-e0379d783795" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8787:">
                     <Actions>
@@ -3547,7 +3454,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="LetterOfTheLaw" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="击退 - 光" Id="e6a7f54c-c3c8-402f-b0a7-e8f926a2a4d9" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8786:">
                     <Actions>
@@ -3577,7 +3483,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="LetterOfTheLaw" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="分身安全方向" Id="e1adbdbf-a3ca-44d7-ad09-ceca282efff7" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:821E:.+:(?&lt;d&gt;[^:]+)$">
                     <Actions>
@@ -3597,7 +3502,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="LetterOfTheLaw" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="光暗门安全点（cactbotself）" Id="69ecd636-7536-4731-9675-4ae67046cefe" RegularExpression="^.{15}\S+ 00:0:105:4.{7}:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;(8[29]|11[07])[^:]+):(?&lt;y&gt;(8[29]|11[07])[^:]+):[^:]+:(?&lt;type&gt;1611[78]):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" Description="Here are the distances from each of the eight points to the center point (100, 100):&#xD;&#xA;&#xD;&#xA;Distance from (96.4645, 75.2513) to (100, 100): 25 units&#xD;&#xA;Distance from (75.2513, 96.4645) to (100, 100): 25 units&#xD;&#xA;Distance from (89.3934, 117.6777) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (82.3223, 110.6066) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (89.3934, 82.3223) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (96.4645, 124.7487) to (100, 100): 25 units&#xD;&#xA;Distance from (75.2513, 103.5355) to (100, 100): 25 units&#xD;&#xA;Distance from (82.3223, 89.3934) to (100, 100): 20.6156 units">
                     <Actions>
@@ -3629,7 +3533,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_Gate2_safe}" ExpressionTypeL="String" ExpressionR="${type}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="LetterOfTheLaw" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="光暗球安全点（cactbotself）" Id="b71e7dd5-715d-4838-8ee7-9d429810fff6" RegularExpression="^.{15}\S+ 00:0:105:4.{7}:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):[^:]+:(?&lt;type&gt;16119|16120):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" Description="Here are the distances from each of the eight points to the center point (100, 100):&#xD;&#xA;&#xD;&#xA;Distance from (96.4645, 75.2513) to (100, 100): 25 units&#xD;&#xA;Distance from (75.2513, 96.4645) to (100, 100): 25 units&#xD;&#xA;Distance from (89.3934, 117.6777) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (82.3223, 110.6066) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (89.3934, 82.3223) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (96.4645, 124.7487) to (100, 100): 25 units&#xD;&#xA;Distance from (75.2513, 103.5355) to (100, 100): 25 units&#xD;&#xA;Distance from (82.3223, 89.3934) to (100, 100): 20.6156 units">
                     <Actions>
@@ -3655,7 +3558,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_Orb2_safe}" ExpressionTypeL="String" ExpressionR="${type}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="LetterOfTheLaw" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="c4da0572-053f-44c3-bf2f-c0c4665e513b" RegularExpression="">
                     <Actions>
@@ -3670,7 +3572,6 @@
                       <Action OrderNumber="9" LogMessageText="[06:56:10.523] ChatLog 00:0:105:4000C0B9:5FFF:00:00:00:117.68:89.39:0.00:16118:" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3686,7 +3587,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="转转手" Id="eb43de43-f8fa-4dcc-a945-129baf568d4f" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8205:">
                         <Actions>
@@ -3695,7 +3595,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Dark and Light" Id="b14453b2-9947-403d-bf4b-2aac7c145d48" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:81FE:">
                         <Actions>
@@ -3704,7 +3603,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="光暗门" Id="134a632f-ddf2-4c51-892c-9d1eb77cbeec" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:820[DE]:">
                         <Actions>
@@ -3713,7 +3611,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Dark and Light 结束" Id="efa43f0e-48c5-4a32-9745-5f463eeff390" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8202:">
                         <Actions>
@@ -3722,7 +3619,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Letter of the Law" Id="bc7ffe8a-595d-494a-beb6-b49e536fc6ef" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:87D2:">
                         <Actions>
@@ -3731,7 +3627,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3747,7 +3642,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${pd:P9-12_cfg[useWm10]}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="标点重载" Id="4aeedae1-be8d-4c79-875e-73334874f092" RegularExpression="^.{15}\S+ 21:.{8}:40000006">
                         <Actions>
@@ -3761,7 +3655,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${pd:P9-12_cfg[useWm10]}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3774,7 +3667,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="TargetIcon 相对值" Id="bd3e9aa6-45d4-4d74-a5d0-e2d859137b88" RegularExpression="^.{15}\S+ 1B:(?&lt;PID&gt;.{8}):(?&lt;PN&gt;[^:]*):.{9}:(?&lt;type&gt;.{4}):">
                     <Actions>
@@ -3788,7 +3680,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="存储无序队员列表" Id="1662706d-6ccd-4978-945d-cdb39186f12f" RegularExpression="^.{15}\S+ 16:4.{7}:[^:]+:822B:[^:]+:1.{7}:(?&lt;tn&gt;[^:]+):.+:8$">
                     <Actions>
@@ -3799,7 +3690,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${l:P11s_plist.size}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="团灭中断动作" Id="6d81bffb-8ddf-4e51-b9cd-5bf197da2812" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
                     <Actions>
@@ -3808,7 +3698,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3828,7 +3717,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="激活光" Id="9e972ffd-0595-488f-8953-059343192151" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:820D:">
                     <Actions>
@@ -3843,7 +3731,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="光暗门安全点（cactbotself）" Id="57b85abe-eaf2-458f-a945-141670927b07" RegularExpression="^.{15}\S+ 00:0:105:4.{7}:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;(8[29]|11[07])[^:]+):(?&lt;y&gt;(8[29]|11[07])[^:]+):[^:]+:(?&lt;type&gt;1611[78]):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="1000" Description="Here are the distances from each of the eight points to the center point (100, 100):&#xD;&#xA;&#xD;&#xA;Distance from (96.4645, 75.2513) to (100, 100): 25 units&#xD;&#xA;Distance from (75.2513, 96.4645) to (100, 100): 25 units&#xD;&#xA;Distance from (89.3934, 117.6777) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (82.3223, 110.6066) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (89.3934, 82.3223) to (100, 100): 20.6156 units&#xD;&#xA;Distance from (96.4645, 124.7487) to (100, 100): 25 units&#xD;&#xA;Distance from (75.2513, 103.5355) to (100, 100): 25 units&#xD;&#xA;Distance from (82.3223, 89.3934) to (100, 100): 20.6156 units">
                     <Actions>
@@ -3872,7 +3759,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="Arcane Revelation" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_Gate1_safe}" ExpressionTypeL="String" ExpressionR="${type}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="击退 - 暗" Id="710b4bd8-dfe2-42c0-9ea7-a02211080d0f" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8787:">
                     <Actions>
@@ -3910,7 +3796,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="Arcane Revelation" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="击退 - 光" Id="0fc89876-3e62-45a9-bfb7-f69682069c08" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8786:">
                     <Actions>
@@ -3937,7 +3822,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P11s_phase}" ExpressionTypeL="String" ExpressionR="Arcane Revelation" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3950,7 +3834,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -3972,7 +3855,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="8e518857-51ee-4d33-98bc-e78e901cfc05" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82ED:">
                     <Actions>
@@ -3984,7 +3866,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4. 播报" Id="79b317f2-9051-49b8-9232-b7381f709c9c" RegularExpression="^P12s1_Trinity:output">
                     <Actions>
@@ -3999,7 +3880,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log: ↖ → ↙" Id="8a1d1af3-d69f-4615-a0b6-3057ee8e32fb" RegularExpression="">
                     <Actions>
@@ -4026,7 +3906,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3. 发光" Id="3ed4b913-3530-4621-8e4d-851f1e8bea45" RegularExpression="^.{15}\S+ 1B:(?&lt;id&gt;4.{7})::" PrevActions="Interrupt" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="10000" Description="时间轴：&#xD;&#xA;&#xD;&#xA;0.0: StatusList 0x26&#xD;&#xA;0.0: StatusList 0x26&#xD;&#xA;0.0: StatusList 0x26&#xD;&#xA;&#xD;&#xA;1.0: TargetIcon 1B&#xD;&#xA;4.0: TargetIcon 1B&#xD;&#xA;7.0: TargetIcon 1B&#xD;&#xA;&#xD;&#xA;10.0 (AoE)ActionEffect&#xD;&#xA;12.6 (AoE)ActionEffect&#xD;&#xA;15.2 (AoE)ActionEffect&#xD;&#xA;&#xD;&#xA;利用 Paradeigma （生成小怪读条） 初始化&#xD;&#xA;0 s 记录 id, type * 3&#xD;&#xA;1 s 判断第一个是上 / 下，播报“方向1 - 方向2 - 方向3”&#xD;&#xA;9.0 / 12.6 s: “穿 / 不动”">
                     <Actions>
@@ -4118,7 +3997,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log: ↘ → ↖" Id="28244589-dff6-44ca-bb3a-32eaf3302cb5" RegularExpression="">
                     <Actions>
@@ -4145,7 +4023,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 读条" Id="5735e02d-52db-402f-9771-405119fc17c0" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82E(?&lt;type&gt;[1278]):[^:]*:.{8}:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;d&gt;[^:]+)$">
                     <Actions>
@@ -4160,7 +4037,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4226,7 +4102,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="2. 记录小怪终点位置" Id="ef2fa979-9a77-470c-bfa6-e02384f2bafb" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82F(?&lt;type&gt;[12]):[^:]+:.{8}:[^:]+:[^:]+:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):">
                         <Actions>
@@ -4267,7 +4142,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Paradeigma2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -4310,7 +4184,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Paradeigma2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="3. 光暗塔点名" Id="ec17272b-024a-47b1-a61a-a883f389cd8c" RegularExpression="^.{15}\S+ 1A:DF(?&lt;type&gt;B|C):[^:]+:9.00:.{8}::.{8}:(?&lt;TN&gt;[^:]+):">
                         <Actions>
@@ -4352,7 +4225,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -4396,7 +4268,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 光暗连线" Id="3ecc3471-ca73-4668-aeed-82a74cc4ea8f" RegularExpression="^.{15}\S+ 23:4.{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+):[^:]*:[^:]*:00(?&lt;type&gt;E[9A]|F[AB]):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="15000">
                     <Actions>
@@ -4435,7 +4306,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Paradeigma2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4. 躲激光" Id="9392e236-e6f6-4fff-805a-3e7b35afac5e" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82EE:[^:]+:.{8}:[^:]+:[^:]+:(?&lt;x&gt;85|95)">
                     <Actions>
@@ -4444,7 +4314,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="615c707a-30af-446d-8cf8-e35e2aa6dd0c" RegularExpression="">
                     <Actions>
@@ -4473,7 +4342,6 @@
                       <Action OrderNumber="15" LogMessageText="[23:04:19.339] StartsCasting 14:4003D6CC:Anthropos:82F1:_rsv_33521_-1_1_0_0_SE2DC5B04_EE2DC5B04:1092CF89:Suanra Heliox:8.700:97.00:125.00:0.00:-3.14" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4498,7 +4366,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="门神 远近死刑" Id="e4e29ed7-cac7-429b-9c15-0ff984342878" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82F(?&lt;type&gt;[EF]):" PeriodRefire="Deny" RefirePeriodExpression="1000">
                     <Actions>
@@ -4528,7 +4395,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="门神 AoE：On the Soul" Id="69a5294b-0217-417b-8331-9d5b55cbf95b" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8304:">
                     <Actions>
@@ -4537,7 +4403,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="门神 AoE Theo's Ultima" Id="b35ebec0-78de-4596-9837-26db4da6f11f" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:82FA:">
                     <Actions>
@@ -4546,7 +4411,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="本体 AoE：Ultima" Id="16159297-0e84-4ff8-885e-c9857b019fa4" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8682:">
                     <Actions>
@@ -4555,7 +4419,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="门神 死刑：Glaukopis" Id="e162e107-6e36-4b91-821a-90f7e44d7ad1" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:82FC:">
                     <Actions>
@@ -4571,7 +4434,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="本体 多段死刑：Crush Helm" Id="889721bf-ea59-4222-acd2-357d5d7406ab" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8317:">
                     <Actions>
@@ -4587,7 +4449,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4608,7 +4469,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Palladion" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 记录麻将点名" Id="299665e3-678f-43b1-b990-2a4949b1d39a" RegularExpression="^P12s_1B:1.{7}:(?&lt;name&gt;[^:]+):(?&lt;type&gt;-13[5432]|-3[4321])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -4640,7 +4500,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="3. 吃到激光" Id="57c0c7e5-f193-43b3-b9c1-f5de059ee40d" RegularExpression="^.{15}\S+ 1[56]:4.{7}:[^:]+:82F0:[^:]+:.{8}:(?&lt;TN&gt;[^:]+):.+:(?&lt;AoEID&gt;[^:]+):(?&lt;order&gt;\d+):(?&lt;count&gt;\d+)$">
                         <Actions>
@@ -4703,7 +4562,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Palladion" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -4733,7 +4591,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.1 麻将冲锋 1 3" Id="89b6d92e-6940-4c9b-8613-acd44cca0b6e" RegularExpression="^P12s_1B:1.{7}:(?&lt;name&gt;[^:]+):(?&lt;type&gt;-13[53])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -4759,7 +4616,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.2 麻将冲锋 2 4" Id="2ceda0df-5e5e-4881-8bd2-17dad43d9dcf" RegularExpression="^P12s_1B:1.{7}:(?&lt;name&gt;[^:]+):(?&lt;type&gt;-13[42])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -4788,7 +4644,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.3 麻将冲锋 5 7" Id="f8c5bc04-b4e1-416a-87db-fd2c15a31cb5" RegularExpression="^P12s_1B:1.{7}:(?&lt;name&gt;[^:]+):(?&lt;type&gt;-3[42])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -4817,7 +4672,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="028d3501-5ed8-434f-acf6-b554bf6856e6" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82FC:">
                     <Actions>
@@ -4841,7 +4695,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 记录实体 id" Id="3842fdf1-3e46-4acc-bb56-461c04053d88" RegularExpression="^.{15}\S+ 00:0:106:(?&lt;id&gt;4.{7}):[^:]*:0197:0000:000011D(?&lt;type&gt;[34]):">
                     <Actions>
@@ -4855,7 +4708,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Palladion" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 记录实体顺序" Id="f0d54c9a-f8d1-4432-8573-93c53fd71eda" RegularExpression="^.{15}\S+ 00:0:106:(?&lt;id&gt;4.{7}):[^:]*:0197:0000:00001E39:">
                     <Actions>
@@ -4878,7 +4730,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${evar:P12s1_Palladion_isLaser_${id}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Palladion" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4.3 激光/扇形提示音" Id="fdb56bae-cdbf-4c08-97d9-fb7f85afc00c" RegularExpression="^.{15}\S+ 15:4.{7}:[^:]+:(?&lt;SID&gt;82EF|82FB):" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="500">
                     <Actions>
@@ -4896,7 +4747,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Palladion" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4.1 激光触发" Id="a5beef54-8b1a-4048-93e6-05dc894bd2ca" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:82F5:">
                     <Actions>
@@ -4914,7 +4764,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4.2 激光播报" Id="0f0e66e8-5cd0-4307-b0c9-9f309ee11521" RegularExpression="^P12s1_Palladion:laser:(?&lt;index&gt;[1-4])$">
                     <Actions>
@@ -4946,7 +4795,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="4bfbef93-73d5-44e4-aaeb-05ebf9fcab0c" RegularExpression="">
                     <Actions>
@@ -5024,7 +4872,6 @@
                       <Action OrderNumber="54" LogMessageText="[23:53:59.737] ChatLog 00:0:106:4001440C:Anthropos:0197:0000:00001E39:00000000:00000000:00000000::00000000:" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="1.3 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5041,7 +4888,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 记录实体" Id="f09285bf-b363-40aa-9874-60175559030f" RegularExpression="^.{15}\S+ 03:4.{7}:[^:]+:00:[^:]+:0000:00::12377:(?&lt;type&gt;1617[6-9]|16180):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):">
                     <Actions>
@@ -5172,7 +5018,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="SuperchainTheoryIIB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 记录激光" Id="1e39563e-d93f-4f13-ac33-365e4a228ae1" RegularExpression="^.{15}\S+ 105:Change:4.{7}:Heading:[^:]*:PosX:(?&lt;x&gt;87|113).0000:PosY:75.0000">
                     <Actions>
@@ -5196,7 +5041,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="SuperchainTheoryIIB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3. 记录地板" Id="4228f16c-c823-49ce-a49d-8cabcc5adcaf" RegularExpression="^.{15}\S+ 105:Change:(?&lt;id&gt;4.{7}):Heading:0.0000:PosX:(?&lt;x&gt;90|110).0000:PosY:(?&lt;y&gt;85|95|105|115).0000:">
                     <Actions>
@@ -5246,7 +5090,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="SuperchainTheoryIIB" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:P12s1_Chain2B_floor_ids.indexof(${id})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4. 处理数据" Id="34fa8cf0-b388-4f51-8a44-272e27791249" RegularExpression="^P12s1_Chain2B:adds:1">
                     <Actions>
@@ -5373,7 +5216,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="686bf11a-7ddf-4b31-b1cc-1c8f48a866ed" RegularExpression="">
                     <Actions>
@@ -5415,7 +5257,6 @@
                       <Action OrderNumber="30" LogMessageText="[08:57:04.853] 261 105:Change:40002FFA:Heading:0.0000:PosX:90.0000:PosY:85.0000:PosZ:0.0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log 2" Id="682a76a2-291b-4805-af5f-d0734b2ca59a" RegularExpression="">
                     <Actions>
@@ -5446,7 +5287,6 @@
                       <Action OrderNumber="25" LogMessageText="[23:02:43.891] 261 105:Change:40026D36:Heading:0.0000:PosX:110.0000:PosY:115.0000:PosZ:0.0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5460,7 +5300,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 记录实体" Id="a34857e3-a0d2-4457-a740-009f6c5a193a" RegularExpression="^.{15}\S+ 03:4.{7}:[^:]+:00:[^:]+:0000:00::12377:(?&lt;type&gt;1617[6-9]|16180):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):">
                     <Actions>
@@ -5512,7 +5351,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="SuperchainTheoryIIA" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 处理数据 （含标点）" Id="f7e75cbd-9def-4b7b-a971-0f3113360a60" RegularExpression="^P12s1_Chain2A:adds">
                     <Actions>
@@ -5627,7 +5465,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log " Id="66053331-6657-4cd9-b439-8c09db20ae17" RegularExpression="">
                     <Actions>
@@ -5656,7 +5493,6 @@
                       <Action OrderNumber="19" LogMessageText="[23:14:56.934] TargetIcon 1B:400240E8::0000:0000:0279:0000:0000:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="3.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5672,7 +5508,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Paradeigma" Id="e39e0f27-a4b8-405b-a1c9-c3fa3dc4579f" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82ED:">
                         <Actions>
@@ -5689,7 +5524,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="0${var:P12s1_phase_Paradeigma_n}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="The Classical Concepts" Id="85cb37c8-0ee8-4683-a2dc-e8deeda08ae4" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8331:">
                         <Actions>
@@ -5701,7 +5535,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Superchain Theory IIA" Id="e286d93b-f1b7-45a5-8dbb-daaedf875c27" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:86FA:">
                         <Actions>
@@ -5710,7 +5543,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Superchain Theory IIB" Id="edcc1120-e49e-402a-93b1-3010eb7be918" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:86FB:">
                         <Actions>
@@ -5719,7 +5551,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Palladion" Id="9e386cca-8da7-4ea2-8277-6a3a374bab60" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82FC:">
                         <Actions>
@@ -5733,7 +5564,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="Gaiaochos" Id="bb28a61f-59fb-43be-a59d-99a5d8cc3e82" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8326:">
                         <Actions>
@@ -5745,7 +5575,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -5759,7 +5588,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="标点重载" Id="56e2835f-3eb8-4421-b115-53066c83705e" RegularExpression="^.{15}\S+ 21:.{8}:40000006">
                         <Actions>
@@ -5771,7 +5599,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -5784,7 +5611,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="TargetIcon 相对值 (P12s 限定)" Id="58179b73-364d-4b54-80a6-213d77097288" RegularExpression="^.{15}\S+ 1B:(?&lt;PID&gt;.{8}):(?&lt;PN&gt;[^:]*):.{9}:(?&lt;type&gt;.{4}):">
                     <Actions>
@@ -5804,7 +5630,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="团灭中断动作" Id="94c1f242-4e06-489c-82d3-1741807f9d1d" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
                     <Actions>
@@ -5813,7 +5638,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5830,7 +5654,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.2 斜十字 （TH）" Id="36579776-9637-4531-85a6-7f80f29a46ea" RegularExpression="^.{15}\S+ 1A:E00:[^:]+:[^:]+:[4E].{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+):">
                     <Actions>
@@ -5866,7 +5689,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.1 正十字 （TH）" Id="a0779aca-924b-4b6c-802d-71c9ab163a51" RegularExpression="^.{15}\S+ 1A:DFF:[^:]+:[^:]+:[4E].{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+):">
                     <Actions>
@@ -5902,7 +5724,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].role}" ExpressionTypeL="String" ExpressionR="DPS" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.1 记录光暗塔 buff" Id="92912993-6e58-48d1-8091-4da985f8f360" RegularExpression="^.{15}\S+ 1A:DF(?&lt;type&gt;B|C):[^:]+:17.00:.{8}::1.{7}:(?&lt;TN&gt;[^:]+):">
                     <Actions>
@@ -5940,7 +5761,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.3 记录光小怪半场" Id="f6168ede-6e46-496b-bae7-fca6fdb1f2b6" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82F1:[^:]+:1.{7}:(?&lt;TN&gt;[^:]+):[^:]*:(?&lt;x&gt;75|125).00:97.00:">
                     <Actions>
@@ -5954,7 +5774,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Paradeigma3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.3 光暗连线 （D）" Id="fd35fa22-0bb5-47c9-9970-f602df51245c" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82F(?&lt;type&gt;[12]):[^:]+:1.{7}:(?&lt;TN&gt;[^:]+):[^:]*:(?&lt;x&gt;75|125).00:(?&lt;y&gt;97|103).00:" PrevActionsRefire="Deny">
                     <Actions>
@@ -6010,7 +5829,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Paradeigma3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.4 光暗塔 （TH）" Id="e2e491b3-fbde-41da-84bb-097019bd2b65" RegularExpression="^P12s1_Para3:buffOnSelf$">
                     <Actions>
@@ -6043,7 +5861,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="16105c16-0c1b-4a32-b535-59119da89752" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:82F(?&lt;type&gt;[12]):[^:]+:1.{7}:(?&lt;TN&gt;[^:]+):[^:]*:(?&lt;x&gt;75|125).00:(?&lt;y&gt;97|103).00:|^.{15}\S+ 1A:E00:[^:]+:[^:]+:[4E].{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+):|^.{15}\S+ 1A:DFF:[^:]+:[^:]+:[4E].{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+):|^.{15}\S+ 14:4.{7}:[^:]+:82F1:[^:]+:1.{7}:(?&lt;TN&gt;[^:]+):[^:]*:(?&lt;x&gt;75|125).00:97.00:|^.{15}\S+ 23:(?&lt;id&gt;4.{7})::4|^.{15}\S+ 1A:DF(?&lt;type&gt;B|C):[^:]+:17.00:.{8}::1.{7}:(?&lt;TN&gt;[^:]+):|^.{15}\S+ 14:4.{7}:[^:]+:82ED:">
                     <Actions>
@@ -6066,7 +5883,6 @@
                       <Action OrderNumber="13" LogMessageText="[06:45:27.473] Tether 23:4001C5F3::4001C530:Athena:0000:0000:00E8:4001C530:000F:0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.2 记录安全地板" Id="2d516b39-d8e8-433e-9d14-ce5b2d767eee" RegularExpression="^.{15}\S+ 105:Change:4.{7}:Heading:0.0000:PosX:(?&lt;x&gt;90|110).0000:PosY:(?&lt;y&gt;85|95|105|115).0000:">
                     <Actions>
@@ -6083,7 +5899,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="Paradeigma3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -6097,7 +5912,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 记录实体" Id="b209b795-12a0-49fe-965d-5da084ede63b" RegularExpression="^.{15}\S+ 03:4.{7}:[^:]+:00:[^:]+:0000:00::12377:(?&lt;type&gt;1617[6-9]|16180):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):">
                     <Actions>
@@ -6213,7 +6027,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="SuperchainTheoryI" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.3 第三组实体" Id="7afbfcee-b8e0-4103-aff4-ecef23409400" RegularExpression="^P12s1_Chain1:adds:3">
                     <Actions>
@@ -6281,7 +6094,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.1 第一组实体 （含标点）" Id="bcb15a20-102b-4594-ac7d-1071cb8c6715" RegularExpression="^P12s1_Chain1:adds:1">
                     <Actions>
@@ -6333,7 +6145,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 自身 buff" Id="90b90d18-45b6-42ea-bcd4-510fc4461282" RegularExpression="^.{15}\S+ 1A:DF(?&lt;type&gt;[89A-E]):[^:]+:[^:]+:[4E].{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+)">
                     <Actions>
@@ -6403,7 +6214,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${TN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s1_phase}" ExpressionTypeL="String" ExpressionR="SuperchainTheoryI" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.2 第二组实体" Id="29177480-4226-4238-8180-7b0c89f6c981" RegularExpression="^P12s1_Chain1:adds:2">
                     <Actions>
@@ -6427,7 +6237,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="cdf1271e-3be5-4a7d-91b6-906ae9574317" RegularExpression="">
                     <Actions>
@@ -6466,7 +6275,6 @@
                       <Action OrderNumber="31" LogMessageText="[06:22:32.464] StatusAdd 1A:DF9:_rsv_3577_-1_1_0_0_S74CFC3B0_E74CFC3B0:4.00:4001C27B:Athena:10971211:Stella Fleur:00:114470:44" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -6508,7 +6316,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.2 Ultima Ray 播报" Id="fd7f56bd-65bc-4998-bd98-4c0122a2e57b" RegularExpression="^P12s2_Gaiaochos:UltimaRay">
                     <Actions>
@@ -6538,7 +6345,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="6562566c-ab50-4bc8-9dbe-5594e983bb2e" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8326:">
                     <Actions>
@@ -6553,7 +6359,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="5f744e45-b019-4849-9420-fa3f1d98f55c" RegularExpression="">
                     <Actions>
@@ -6565,7 +6370,6 @@
                       <Action OrderNumber="4" LogMessageText="[12:02:54.932] 261 105:Change:40003FE2:Heading:0.0000:PosX:100.0000:PosY:80.0000:PosZ:0.0000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.1 Ultima Ray 记录位置" Id="fddb00e9-4e36-4bdc-8ebc-e08197eabb48" RegularExpression="^.{15}\S+ 105:Change:4.{7}:Heading:(?&lt;h&gt;[^:]+):PosX:(?&lt;x&gt;[^:]+):PosY:(?&lt;y&gt;[^:]+):">
                     <Actions>
@@ -6591,7 +6395,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s2_phase}" ExpressionTypeL="String" ExpressionR="Gaiaochos1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="round(distance(${x},${y},100,90),2)" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="String" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -6717,7 +6520,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${tvar:P12s2_CC_items[${col}][${row}]}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${tvar:P12s2_CC_ry2b[${col}][${row}]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.3 检测：蓝 / 已记录（跳过）" Id="03561f00-a866-46a8-bc55-8ebb8d597f52" RegularExpression="^P12s2_CC:examine:(?&lt;row&gt;[123]):(?&lt;col&gt;[1234]):(?&lt;times&gt;\d+)$">
                     <Actions>
@@ -6735,7 +6537,6 @@
                       </ConditionGroup>
                       <ConditionSingle Enabled="true" ExpressionL="${tvar:P12s2_CC_items[${col}][${row}]}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.2 检测：黄 未记录" Id="7da4eb6e-60ab-4f6b-b2fe-22ca37a926fe" RegularExpression="^P12s2_CC:examine:(?&lt;row&gt;[123]):(?&lt;col&gt;[1234]):(?&lt;times&gt;\d+)$">
                     <Actions>
@@ -6856,7 +6657,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${tvar:P12s2_CC_items[${col}][${row}]}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${tvar:P12s2_CC_ry2b[${col}][${row}]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化" Id="63e3de25-f314-4d7e-bfde-7a33d2b26c24" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8331:">
                     <Actions>
@@ -6889,7 +6689,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.2 记录实体" Id="c4cb289b-31ac-4587-bcba-3dc38fb9151a" RegularExpression="^.{15}\S+ 03:4.{7}:[^:]+:00:[^:]+:0000:00::1238[456]:1618(?&lt;type&gt;[345]):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):">
                     <Actions>
@@ -6926,7 +6725,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.3 场地标点" Id="29eb6975-36e1-43aa-a5e6-75966c10c101" RegularExpression="^P12s2_CC:output:1:1$">
                     <Actions>
@@ -6957,7 +6755,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="e89ce5eb-8a24-4f06-851c-3c90eda931e2" RegularExpression="">
                     <Actions>
@@ -6983,7 +6780,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1.1 记录 buff" Id="c737883a-0a14-461b-b8bd-14464d5489ed" RegularExpression="^.{15}\S+ 1A:DE(?&lt;type&gt;[89]):[^:]+:[^:]+:[4E].{7}:[^:]*:1.{7}:(?&lt;TN&gt;[^:]+)">
                     <Actions>
@@ -6997,7 +6793,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.0 触发检测循环" Id="d9cee0b8-3986-483f-822e-37ec0a4927ac" RegularExpression="^P12s2_CC:examine_loop:(?&lt;row&gt;[123]):(?&lt;col&gt;[1234]):(?&lt;times&gt;\d+)$">
                     <Actions>
@@ -7062,7 +6857,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.1 文本播报（第一次）" Id="05b9fa8a-8550-4948-a1cc-f51432c66ce0" RegularExpression="^P12s2_CC:output:(?&lt;row&gt;[1-5]):(?&lt;col&gt;[1-7])$">
                     <Actions>
@@ -7126,7 +6920,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s2_phase_TheClassicalConcepts_n}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="3.2 文本播报（第二次）" Id="0e2f3fd0-6f8c-480d-9de7-d057f42edf9a" RegularExpression="^P12s2_CC:output:(?&lt;row&gt;[1-5]):(?&lt;col&gt;[1-7])$">
                     <Actions>
@@ -7190,7 +6983,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P12s2_phase_TheClassicalConcepts_n}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="5. 引导光波" Id="f507034a-e7c2-47fe-8749-fbc2ebb73464" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:8323:">
                     <Actions>
@@ -7205,7 +6997,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="4. 头顶标记" Id="326aad83-5e29-49d2-ac6a-b10d4bed94a2" RegularExpression="^P12s_1B:1.{7}:(?&lt;name&gt;[^:]+):(?&lt;type&gt;10[1234])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -7216,14 +7007,13 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers />
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1148$" Id="7c9700dc-b99a-45ae-8df8-cf7a8c0a2c0f" ZoneFilterRegularExpression="by MnFeN" Name="P09s v2.0 by MnFeN" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^1148$" Id="7c9700dc-b99a-45ae-8df8-cf7a8c0a2c0f" ZoneFilterRegularExpression="by MnFeN" Name="P09s v2.0 by MnFeN" Enabled="false">
             <Folders>
               <Folder Id="0d4d7713-aeb6-4e0c-8a5d-9a5b5d8689f0" Name="A. 冰火雷" Enabled="true">
                 <Folders />
@@ -7267,7 +7057,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2 赋予属性" Id="a570a097-a834-453e-ac3f-06fd0a9cf4e1" RegularExpression="^.{15}\S+ 15:4.{7}:[^:]*:(?&lt;SID&gt;812[23]|815C):">
                     <Actions>
@@ -7326,7 +7115,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -7357,7 +7145,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${v:P9s_phase}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="双组分摊 Archaic Demolish" Id="0790c71e-f91f-4821-9d0f-505598cabba1" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:816D:">
                     <Actions>
@@ -7366,7 +7153,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="0. 初始化（击退）" Id="c599116f-50f0-4174-a0a7-8b22dbe1395f" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]+:815F:">
                     <Actions>
@@ -7378,7 +7164,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="8a8e24f6-5a13-4dd5-9aec-dd9f32557027" RegularExpression="">
                     <Actions>
@@ -7408,7 +7193,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 第一次：组合技 Front/Rear Combination" Id="cb374ad9-c406-4fbf-8caa-09c41c420a9a" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:816(?&lt;type&gt;[789A])">
                     <Actions>
@@ -7562,7 +7346,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${v:P9s_phase}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 第一次：地板线条" Id="31d607ee-047a-4c15-935f-e38bbf24f83e" RegularExpression="^.{15}\S+ 101:.{8}:0(?&lt;type&gt;[82])000001:00:">
                     <Actions>
@@ -7582,7 +7365,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${v:P9s_phase}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -7596,7 +7378,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="AoE Ravening" Id="4e9b37df-9c98-423b-b004-88a6bcc0832a" RegularExpression="^.{15}\S+ 15:4.{7}:[^:]*:(8118|8119|817B):">
                     <Actions>
@@ -7605,7 +7386,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="单死刑 Ascendant Fist" Id="a1b40fb8-8f76-48ce-a167-00635d136824" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:816F:[^:]+:.{8}:(?&lt;TN&gt;[^:]+)">
                     <Actions>
@@ -7621,7 +7401,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="双死刑 Duality of Death" Id="6e4bf001-a352-4cbf-b297-a89f1ce90f12" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8151:">
                     <Actions>
@@ -7637,7 +7416,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="AoE Beastly Fury" Id="e7e1bb30-1d27-4b13-a131-3f75913d666a" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8186:">
                     <Actions>
@@ -7646,7 +7424,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="陨石 Ecliptic Meteor" Id="2a53d4fa-c2ce-4638-ae66-ab8e63bd8857" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:8175:">
                     <Actions>
@@ -7658,7 +7435,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -7689,7 +7465,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 麻将点名 6" Id="2f7899d8-2bf1-44ac-abfd-5704a3f42c41" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-384$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7713,7 +7488,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 麻将点名 8" Id="211f828d-512f-41e0-b2c6-abb4585b8164" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-382$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7734,7 +7508,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 麻将点名 4" Id="fe483605-91a2-4280-b8ea-b1624ac9fac2" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-386$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7755,7 +7528,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 1" Id="c5a47aed-c9ec-4966-8d14-382ed52338c1" RegularExpression="^P9s_LC1_selfCircleOrder:1" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7770,7 +7542,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 2 / 3" Id="168f936c-70bd-44cc-87b3-bd09ff6d0d8c" RegularExpression="^P9s_LC1_selfCircleOrder:(?&lt;order&gt;[23])" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7788,7 +7559,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 4" Id="6cfc12c3-a0f8-4e2e-950c-5170447ed817" RegularExpression="^P9s_LC1_selfCircleOrder:4" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7803,7 +7573,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="2.2 麻将 1/3 处理角度" Id="79848487-1191-4bd8-8f3a-342ae2005b73" RegularExpression="^P9s_LC1_rotation:recorded">
                         <Actions>
@@ -7847,7 +7616,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -7873,7 +7641,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 麻将点名 6" Id="93708d07-30bc-4529-96e8-74fccf48b5f2" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-384$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7897,7 +7664,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 麻将点名 8" Id="facfdbf6-3e41-419f-84f6-64f42839e05c" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-382$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7921,7 +7687,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 麻将点名 2" Id="8c9f4907-0684-4284-83fa-702f0325692c" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-388$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7945,7 +7710,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                           <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 4" Id="8ae91169-9852-414d-8f97-adbff961e179" RegularExpression="^P9s_LC1_selfCircleOrder:4" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7963,7 +7727,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 1" Id="4f95a3f0-016c-4fd2-8f48-e80f87b36ed4" RegularExpression="^P9s_LC1_selfCircleOrder:1" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7981,7 +7744,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 2" Id="38f49b9a-eea6-4906-91bc-b5c508c53a24" RegularExpression="^P9s_LC1_selfCircleOrder:2" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -7999,7 +7761,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="1. 蓝圈点名 3" Id="7e3fd646-ec69-436a-9ed6-49a86f273879" RegularExpression="^P9s_LC1_selfCircleOrder:3" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                         <Actions>
@@ -8017,7 +7778,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="2.2 麻将 1/3 处理角度" Id="7de14eb9-d3ea-4861-a14e-34ef5b19ea20" RegularExpression="^P9s_LC1_rotation:recorded">
                         <Actions>
@@ -8061,7 +7821,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -8074,7 +7833,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2.1 麻将 1/3 记录角度" Id="76e0f98e-7c80-48e5-8eed-04f75c117841" RegularExpression="^P9s_1B:(?&lt;id&gt;.{8}):[^:]+:(?&lt;type&gt;-38[97])$">
                     <Actions>
@@ -8099,7 +7857,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 麻将无点名" Id="c6948bd9-97ec-43b5-a3d0-7d9ff2bdc7ae" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):(?&lt;type&gt;-38[8642])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8121,7 +7878,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 蓝圈点名" Id="caa74573-7503-464f-a65c-0a5f6537b214" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-138$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8166,7 +7922,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="false" Name="Debug Log" Id="b4d70c91-be57-4f3a-91f8-4a10c3f6dfbe" RegularExpression="">
                     <Actions>
@@ -8200,7 +7955,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Sequential="True" Name="读条：根据配置切换开关" Id="a8687c7e-fa4d-489c-81b9-d07076371248" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:817C:">
                     <Actions>
@@ -8222,7 +7976,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -8236,7 +7989,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 麻将点名 2" Id="2e432dc5-7579-459b-943a-18716d74cad9" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-388$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8251,7 +8003,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 麻将点名 4" Id="f622f8d8-ec87-467f-aa5e-b0032aa892cf" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-386$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8266,7 +8017,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 麻将点名 1" Id="9c1f164a-0088-4e76-bf38-57bb636fd5fa" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-389$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8281,7 +8031,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 麻将点名 3" Id="52d52e00-c85e-405e-9369-1e189879d344" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):-387$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8296,7 +8045,6 @@
                       <ConditionSingle Enabled="true" ExpressionL="${PN}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="1. 麻将无点名" Id="61ec3889-84c9-4ad1-846a-b42a7e765c09" RegularExpression="^P9s_1B:.{8}:(?&lt;PN&gt;[^:]+):(?&lt;type&gt;-38[9876])$" Description="[06:13:45.297] TargetIcon 1B:106EA8AD:Locria Sonata:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:13:45.297] TargetIcon 1B:10914C9B:Bun Be-nuong:0000:0000:0158:0000:0000:0000&#xD;&#xA;&#xA;[06:15:13.357] TargetIcon 1B:108CAB76:Vm Hyd:0000:0000:01DA:0000:0000:0000&#xD;&#xA;[06:15:13.446] StartsCasting 14:4000E871:Golbez:84B5:Double Meteor:4000E871:Golbez:10.700:99.99:92.48:0.03:-2.86&#xA;&#xD;&#xA;&#xA;[06:15:13.446] TargetIcon 1B:108F4C6B:Kalani Pendragon:0000:0000:01D9:0000:0000:0000&#xA;&#xD;&#xA;[06:15:13.446] TargetIcon 1B:10858EE5:Kazen Irc:0000:0000:01D9:0000:0000:0000&#xA;">
                     <Actions>
@@ -8318,7 +8066,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:P9s_phase_LC}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="2. 未来/过去破灭 Front/Rear Firestrikes" Id="1404d728-2567-4108-b3b4-ee4686465111" RegularExpression="^.{15}\S+ 14:4.{7}:[^:]*:(?&lt;SID&gt;878[EF]):">
                     <Actions>
@@ -8354,7 +8101,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:P9s_LC2_isSelf}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -8373,7 +8119,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -8389,7 +8134,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="标点重载" Id="e66ef8c3-fca1-4043-853d-bea4e96e2e08" RegularExpression="^.{15}\S+ 21:.{8}:40000006">
                         <Actions>
@@ -8405,7 +8149,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -8418,7 +8161,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="TargetIcon 相对值" Id="e2155439-de0f-4337-8218-da8c6478ccb5" RegularExpression="^.{15}\S+ 1B:(?&lt;PID&gt;.{8}):(?&lt;PN&gt;[^:]*):.{9}:(?&lt;type&gt;.{4}):">
                     <Actions>
@@ -8432,7 +8174,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Name="团灭中断动作" Id="4c286208-fe2c-4505-95f6-a87213e2da91" RegularExpression="^.{15}\S+ 21:.{8}:400000(03|11)">
                     <Actions>
@@ -8441,7 +8182,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -8458,7 +8198,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="记录用户配置" Id="869e1087-e515-446f-8863-ca425ca0c597" RegularExpression="^P9-12_cfg">
                 <Actions>
@@ -8518,7 +8257,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="检查用户配置" Id="1f2baecd-bf73-4951-a136-fb73d9082c56" RegularExpression="^.{15}\S+ Territory 01:(47C|47E|480|482):">
                 <Actions>
@@ -8532,7 +8270,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${pd:P9-12_cfg.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
                 </Condition>
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -8558,7 +8295,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Sequential="True" Name="1. 触发器配置测试：双击打开" Id="3bf3ea69-0c51-4f26-a291-294e7f8bedce" RegularExpression="" EditAutofire="True" EditAutofireAllowCondition="True">
                 <Actions>
@@ -8600,7 +8336,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -8611,7 +8346,7 @@
               <Action OrderNumber="1" ActionType="Placeholder" Description="用户配置" DescBgColor="346" DescTextColor="fff" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" VariableOp="SetString" VariableName="tmp_cfg_valuemap" VariableJsonTarget="↖ 必须先点这里展开上方行；  你只能修改冒号以后的内容；  修改之后左下角保存更改。" VariableExpression="给全队看的提示发送至该频道：e&#xD;&#xA;给自己看的消息发送至该频道：e&#xD;&#xA;&#xD;&#xA;P9s 第一次麻将使用转圈式(0)还是对穿式(1)：1&#xD;&#xA;&#xD;&#xA;P10s 第二次翅膀时 TTS 是否报连线 DPS 的职业(0/1)：0&#xD;&#xA;&#xD;&#xA;P10s 第三次翅膀连线时中间分摊组为倒三角(0) 还是正三角(1)：0&#xD;&#xA;&#xD;&#xA;P12s 范式2 放塔优先级 根据连线终点确认(0) 还是 根据小怪位置确认(1)：1&#xD;&#xA;&#xD;&#xA;P12s 超链I 月环分摊 左暗右光(0) 或左光右暗(1)：1&#xD;&#xA;&#xD;&#xA;" ActionType="Variable" Asynchronous="False" Description="　　双击本行可查看或修改配置。点击左下角“保存并执行”以保存配置，首次使用时必须保存。此配置重启后会保留。" DescBgColor="f4faff" DescTextColor="a22" DescriptionOverride="True">
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="tmp_cfg_valuemap" VariableJsonTarget="↖ 必须先点这里展开上方行；  你只能修改冒号以后的内容；  修改之后左下角保存更改。" VariableExpression="给全队看的提示发送至该频道：p&#xD;&#xA;给自己看的消息发送至该频道：e&#xD;&#xA;&#xD;&#xA;P9s 第一次麻将使用转圈式(0)还是对穿式(1)：1&#xD;&#xA;&#xD;&#xA;P10s 第二次翅膀时 TTS 是否报连线 DPS 的职业(0/1)：0&#xD;&#xA;&#xD;&#xA;P10s 第三次翅膀连线时中间分摊组为倒三角(0) 还是正三角(1)：0&#xD;&#xA;&#xD;&#xA;P12s 范式2 放塔优先级 根据连线终点确认(0) 还是 根据小怪位置确认(1)：0&#xD;&#xA;&#xD;&#xA;P12s 超链I 月环分摊 左暗右光(0) 或左光右暗(1)：1&#xD;&#xA;&#xD;&#xA;" ActionType="Variable" Asynchronous="False" Description="　　双击本行可查看或修改配置。点击左下角“保存并执行”以保存配置，首次使用时必须保存。此配置重启后会保留。" DescBgColor="f4faff" DescTextColor="a22" DescriptionOverride="True">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" LogMessageText="P9-12_cfg" LogProcess="True" ActionType="LogMessage" Asynchronous="False" Description="　　聊天频道说明：e = 默语  p = 小队  lx = 通讯贝x  cwlx = 跨服贝x  （x 换成具体数字） 不建议设置其他不能连续发言的频道" DescBgColor="f4faff" DescTextColor="234" DescriptionOverride="True">
@@ -8898,7 +8633,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
@@ -8928,7 +8662,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${pn}" ExpressionTypeL="String" ExpressionR="${_me}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="极坐标标点 polarDeg / polarRad" Id="c57d10d5-5ad9-448f-a231-2113478e8ecc" RegularExpression="^AdvWm_polar(?&lt;type&gt;Deg|Rad)(?::θ:(?&lt;theta&gt;[^:]*))?(?::[Cc]enter:(?&lt;x0&gt;[^:]*):(?&lt;y0&gt;[^:]*):(?&lt;z0&gt;[^:]*))?(?&lt;A&gt;:A:(?&lt;ra&gt;[^:]*):(?&lt;thetaa&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;rb&gt;[^:]*):(?&lt;thetab&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;rc&gt;[^:]*):(?&lt;thetac&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;rd&gt;[^:]*):(?&lt;thetad&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;r1&gt;[^:]*):(?&lt;theta1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;r2&gt;[^:]*):(?&lt;theta2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;r3&gt;[^:]*):(?&lt;theta3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;r4&gt;[^:]*):(?&lt;theta4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
                 <Actions>
@@ -9019,7 +8752,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="径向插值标点 polarConnect" Id="db9d337f-9a47-4f21-a88f-52bd4baf57cd" RegularExpression="^AdvWm_polarConnect:[Cc]enter:(?&lt;xc&gt;[^:]+):(?&lt;yc&gt;[^:]+)(?::[^:]+)?:[Ss]tart:(?&lt;x0&gt;[^:]+):(?&lt;y0&gt;[^:]+):(?&lt;z0&gt;[^:]+):[Ee]nd:(?&lt;x1&gt;[^:]+):(?&lt;y1&gt;[^:]+):(?&lt;z1&gt;[^:]+):[Ww]aymarkers:(?&lt;wm&gt;[^:]+)">
                 <Actions>
@@ -9092,7 +8824,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${wm}" ExpressionTypeL="String" ExpressionR="[A-D1-4]{2,8}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="绝对坐标标点 abs" Id="b3ffb49b-fa6b-41ec-af75-e38ee98414f8" RegularExpression="^AdvWm_abs(?&lt;A&gt;:A:(?&lt;xa&gt;[^:]*):(?&lt;ya&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;xb&gt;[^:]*):(?&lt;yb&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;xc&gt;[^:]*):(?&lt;yc&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;xd&gt;[^:]*):(?&lt;yd&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;x1&gt;[^:]*):(?&lt;y1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;x2&gt;[^:]*):(?&lt;y2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;x3&gt;[^:]*):(?&lt;y3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;x4&gt;[^:]*):(?&lt;y4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
                 <Actions>
@@ -9157,7 +8888,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="线性插值标点 linearConnect" Id="93b916d3-fcae-4c4f-94b5-305a3a71746b" RegularExpression="^AdvWm_linearConnect:[Ss]tart:(?&lt;x0&gt;[^:]+):(?&lt;y0&gt;[^:]+):(?&lt;z0&gt;[^:]+):[Ee]nd:(?&lt;x1&gt;[^:]+):(?&lt;y1&gt;[^:]+):(?&lt;z1&gt;[^:]+):[Ww]aymarkers:(?&lt;wm&gt;[^:]+)">
                 <Actions>
@@ -9203,7 +8933,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${wm}" ExpressionTypeL="String" ExpressionR="[A-D1-4]{2,8}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="旋转矩阵标点 rotate" Id="b08a1920-49e1-4654-a9a4-a340a8bb3244" RegularExpression="^AdvWm_rotate(?::θ:(?&lt;theta&gt;[^:]*))?(?::[Cc]enter:(?&lt;x0&gt;[^:]*):(?&lt;y0&gt;[^:]*):(?&lt;z0&gt;[^:]*))?(?&lt;A&gt;:A:(?&lt;xa&gt;[^:]*):(?&lt;ya&gt;[^:]*):(?&lt;za&gt;[^:]*):(?&lt;aa&gt;[^:]*))?(?&lt;B&gt;:B:(?&lt;xb&gt;[^:]*):(?&lt;yb&gt;[^:]*):(?&lt;zb&gt;[^:]*):(?&lt;ab&gt;[^:]*))?(?&lt;C&gt;:C:(?&lt;xc&gt;[^:]*):(?&lt;yc&gt;[^:]*):(?&lt;zc&gt;[^:]*):(?&lt;ac&gt;[^:]*))?(?&lt;D&gt;:D:(?&lt;xd&gt;[^:]*):(?&lt;yd&gt;[^:]*):(?&lt;zd&gt;[^:]*):(?&lt;ad&gt;[^:]*))?(?&lt;One&gt;:One:(?&lt;x1&gt;[^:]*):(?&lt;y1&gt;[^:]*):(?&lt;z1&gt;[^:]*):(?&lt;a1&gt;[^:]*))?(?&lt;Two&gt;:Two:(?&lt;x2&gt;[^:]*):(?&lt;y2&gt;[^:]*):(?&lt;z2&gt;[^:]*):(?&lt;a2&gt;[^:]*))?(?&lt;Three&gt;:Three:(?&lt;x3&gt;[^:]*):(?&lt;y3&gt;[^:]*):(?&lt;z3&gt;[^:]*):(?&lt;a3&gt;[^:]*))?(?&lt;Four&gt;:Four:(?&lt;x4&gt;[^:]*):(?&lt;y4&gt;[^:]*):(?&lt;z4&gt;[^:]*):(?&lt;a4&gt;[^:]*))?$">
                 <Actions>
@@ -9295,7 +9024,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Name="测试循环标点     B：自己-B 线性    AC：自己-C 径向" Id="62f5e3e1-f796-4e2d-8538-f70352cd6b2f" RegularExpression="^.{15}\S+ 1C:Add:(?&lt;wmid&gt;\d+):.{8}:(?&lt;pn&gt;[^:]+):(?&lt;x&gt;[^:]+):(?&lt;y&gt;[^:]+):(?&lt;z&gt;[^:]+)">
                 <Actions>
@@ -9326,7 +9054,6 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${pn}" ExpressionTypeL="String" ExpressionR="${_me}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -9346,7 +9073,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="单个实体标点 mark" Id="14c0827d-2534-48ca-828d-5b7b42304e86" RegularExpression="^AdvHm_mark:(?&lt;entity&gt;[^:]+):(?&lt;marker&gt;[^:]+):(?&lt;isLocal&gt;[^:]+)">
                 <Actions>
@@ -9370,7 +9096,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="清空标点（本地） localClear" Id="d05f41b8-ae95-401f-ba38-440001fc2472" RegularExpression="^AdvHm_localClear:(?&lt;listname&gt;[^:]+)">
                 <Actions>
@@ -9385,7 +9110,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
